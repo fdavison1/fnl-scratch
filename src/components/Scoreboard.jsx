@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Helmet from './Helmet'
+import Field from './Field'
 
 const Wrapper = styled.div`
   width: 600px;
@@ -45,6 +46,8 @@ export default class Scoreboard extends React.Component {
           <Helmet rightHelmet={true} color1={a.color} />
         </div>
         </div>
+
+        <Field />
       </Wrapper>
     )
   }

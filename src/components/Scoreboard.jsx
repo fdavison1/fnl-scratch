@@ -51,7 +51,7 @@ export default class Scoreboard extends React.Component {
         </div>
 
         <div className='field-component'>
-        <Field />
+        <Field game={this.props.game}/>
         </div>
 
       </Wrapper>

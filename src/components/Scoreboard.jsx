@@ -19,6 +19,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-evenly;
   }
+  .field-component {
+    display: flex
+  }
 `
 
 export default class Scoreboard extends React.Component {
@@ -47,7 +50,10 @@ export default class Scoreboard extends React.Component {
         </div>
         </div>
 
+        <div className='field-component'>
         <Field />
+        </div>
+
       </Wrapper>
     )
   }

@@ -1,0 +1,94 @@
+.trapezoid {
+    z-index: 5;
+    position: absolute;
+    width: 492px;
+    height: 75px;
+    transform: perspective(5px) rotateX(.5deg);
+    /* margin: 50px; */
+    /* border: 1px solid green; */
+    background: linear-gradient(
+      90deg,
+      blue 8.3%,
+      green 8.3%,
+      darkgreen 8.3%,
+      green 16.6%,
+      darkgreen 16.6%,
+      green 24.9%,
+      darkgreen 24.9%,
+      green 33.2%,
+      darkgreen 33.2%,
+      green 41.5%,
+      darkgreen 41.5%,
+      green 49.8%,
+      darkgreen 49.8%,
+      green 58.1%,
+      darkgreen 58.1%,
+      green 66.4%,
+      darkgreen 66.4%,
+      green 74.7%,
+      darkgreen 74.7%,
+      green 83%,
+      darkgreen 83%,
+      green 91.3%,
+      darkgreen 91.3%,
+      blue 91.3%,
+      blue 100%
+    );
+  }
+  .team-1 {
+    z-index: 10;
+    position: relative;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    transform: skewX(21deg);
+    left: 465px;
+    top: 15px;
+    color:white;
+  }
+  .team-2 {
+      position: relative;
+    z-index: 11;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: skewX(-22deg) rotate(180deg);
+    margin-left: 14px;
+    margin-top: -40px;
+    color: white;
+  }
+  #horizontal-list{
+    display: flex;
+    margin: 0 0;
+    
+  }
+  h4 {
+    margin-left: 55px;
+    margin-right: 109px;
+    margin-top: 10px;
+    z-index: 10;
+  }
+  .goal-post-right {
+      margin-left: -77px;
+      margin-bottom: 150px;
+    /* position: relative; */
+    /* right: 0; */
+    /* margin-left: 610px;
+    margin-top: -400px;
+    margin-bottom: 65px; */
+    background-color: none;
+    z-index: 2;
+    transform: skewY(55deg)
+  }
+  .goal-post-left{
+    margin-right: -20px;
+    margin-bottom: 135px;
+    /* position: relative; */
+    /* left: 0; */
+    /* margin-top: -400px;
+    margin-bottom: 78px;
+    margin-left: 43px; */
+    z-index: 2;
+    transform: rotateY(210deg) skewY(50deg)
+  }
+  
+  .fieldDiv {
+  }

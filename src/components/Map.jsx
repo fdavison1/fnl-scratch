@@ -1,14 +1,18 @@
 import React from 'react'
-
+import Modal from './Games-Modal'
 
 
 class Map extends React.Component {
     state = {
-
+        modalDisplay: false,
+        st: ''
     }
     
-    showModal(){
-
+    showModal(state){
+        this.setState({
+            modalDisplay: true,
+            st: state
+        })
     }
     
     render(){
@@ -19,9 +23,10 @@ class Map extends React.Component {
             <h1>Map</h1>
             
             <button
-            onClick={ ()=> this.showModal }
+            onClick={ ()=> this.showModal('UT') }
             >Utah</button>
-            
+
+            {this.state.modalDisplay && <Modal st={this.state.st} />}
             </div>
     )
     }

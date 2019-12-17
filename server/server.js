@@ -3,7 +3,7 @@ require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
-// const ctrl = require('./controllers/controller')
+const g = require('./controllers/game-ctrl')
 const { SERVER_PORT, DB_STRING } = process.env
  
 app.use(express.json())
@@ -29,5 +29,8 @@ const db = mongoose.connection
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-// app.get('/api/games', ctrl.getGames)
+
+//ENDPOINTS
+app.get('/api/games/:state', g.getGames)
+app.get('/api/game/:id', g.getGame)
 // app.put('/api/games', ctrl.updateGame)

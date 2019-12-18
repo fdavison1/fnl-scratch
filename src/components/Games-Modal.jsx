@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-import Scoreboard from "./GamePreview";
+import GamePreview from "./GamePreview";
 
 import styled from "styled-components";
 
@@ -10,9 +10,8 @@ const ModalBackdrop = styled.div`
    position: fixed;
    top: 0;
    left: 0;
-
    height: 100vh;
-   width 100vw;
+   width: 100vw;
   .modal-outer {
     position: fixed;
     width: 650px;
@@ -53,6 +52,7 @@ export default class Modal extends React.Component {
   render() {
     return (
       <ModalBackdrop
+      id='grey-back'
         onClick={this.props.closeMenu}
        
       >
@@ -61,7 +61,14 @@ export default class Modal extends React.Component {
         }}>
           {this.state.games.length ? (
             this.state.games.map(game => {
-              return <Scoreboard key={game._id} game={game} />;
+              return (
+                <GamePreview
+                  closeMenu={this.props.hideMenu}
+                  assignElement={this.props.assignElement}
+                  key={game._id}
+                  game={game}
+                />
+              )
             })
           ) : (
             <h1 className="no">no games currently</h1>

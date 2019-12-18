@@ -9,25 +9,18 @@ class Map extends React.Component {
     st: ""
   };
 
-//   toggleModal = () => {
-//     this.setState({
-//       modalDisplay: !this.state.modalDisplay
-//     });
-  
   closeMenu = event => {
-      if (!this.Modal.contains(event.target)) {
-        console.log('close menu is running')
+    const greyBack = document.getElementById('grey-back')
+      if (greyBack.contains(event.target)) {
       this.setState({ modalDisplay: false }, () => {
-        document.removeEventListener("click", this.closeMenu);
+        greyBack.removeEventListener("click", this.closeMenu);
       });
     }
   };
   showMenu = () => {
-    
-      // console.log('menu is working')
-    
-      this.setState({modalDisplay:true}, () => {
-          document.addEventListener('click', this.closeMenu)
+    this.setState({modalDisplay:true}, () => {
+      const greyBack = document.getElementById('grey-back')
+          greyBack.addEventListener('click', this.closeMenu)
       })
   };
 
@@ -44,6 +37,7 @@ class Map extends React.Component {
 
   render() {
     return (
+      <>
       <MapPage>
         <input placeholder="username" />
         <input placeholder="password" />
@@ -51,11 +45,12 @@ class Map extends React.Component {
         <div className="App">
           <USAMap onClick={this.mapHandler} />
           {/* <USAMap onClick={() => {this.toggleModal(); this.mapHandler()}} /> */}
+        </div>
+      </MapPage>
           {this.state.modalDisplay ? (
             <Modal closeMenu={this.hideMenu} st={this.state.st} assignElement={this.assignElement} />
           ) : null}
-        </div>
-      </MapPage>
+          </>
     );
   }
 }

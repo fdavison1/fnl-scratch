@@ -5,6 +5,7 @@ module.exports = {
     getGames: async (req, res) => {
         // console.log(req.params)
         await Game.find({ state: req.params.state} , { 
+            status: 1,
             'home.color': 1, 
             'home.school': 1,
             'home.mascot': 1,
@@ -59,6 +60,7 @@ module.exports = {
               message: 'Game not found!'
             })
           }
+          game.status = body.status
           game.home = body.home
           game.away = body.away
           game.city = body.city

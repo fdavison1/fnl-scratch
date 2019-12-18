@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
-import Scoreboard from "./Scoreboard";
+
+import Scoreboard from "./GamePreview";
+
 import styled from "styled-components";
 
 const ModalBackdrop = styled.div`

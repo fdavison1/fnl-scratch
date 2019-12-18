@@ -23,7 +23,9 @@ class Map extends React.Component {
     }
   };
   showMenu = () => {
-      console.log('menu is working')
+    
+      // console.log('menu is working')
+    
       this.setState({modalDisplay:true}, () => {
           document.addEventListener('click', this.closeMenu)
       })

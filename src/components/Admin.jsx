@@ -46,10 +46,11 @@ handleChange = (trg) => {
 }
 
     render(){
-        console.log(this.state)
+        // console.log(this.state)
         
         return (
           <Wrapper>
+            <h1>New Drive</h1>
             <div className='new-drive'>
               <select
                 onChange={e => this.handleChange(e.target)}
@@ -79,6 +80,7 @@ handleChange = (trg) => {
               </datalist>
               <button>Submit</button>
             </div>
+            <h1>Add Play</h1>
             <div className='add-play'>
               <select
                 onChange={e => this.handleChange(e.target)}

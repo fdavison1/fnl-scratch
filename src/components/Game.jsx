@@ -8,8 +8,8 @@ import GameLeaders from './GameLeaders'
 import Admin from './Admin'
 
 const Container = styled.div`
-display: flex
-justify-content: center`
+display: flex;
+justify-content: center;`
 
 export default class Game extends React.Component{
     state = {
@@ -17,9 +17,11 @@ export default class Game extends React.Component{
         aColor: '',
         aSchool: '',
         aMascot: '',
+        aPlayers: [],
         hColor: '',
         hSchool: '',
-        hMascot: ''
+        hMascot: '',
+        hPlayers: []
     }
 
     componentDidMount(){
@@ -31,9 +33,11 @@ export default class Game extends React.Component{
                 aColor: a.color,
                 aSchool: a.school,
                 aMascot: a.mascot,
+                aPlayers: a.players,
                 hColor: h.color,
                 hSchool: h.school,
                 hMascot: h.mascot,
+                hPlayers: h.players,
                 isLoading: false
             })
         })
@@ -66,7 +70,7 @@ export default class Game extends React.Component{
 
             {!this.state.isLoading && <Field game={this.state}/>}
 
-            {!this.state.isLoading && <Admin />}
+            {!this.state.isLoading && <Admin hPlayers={this.state.hPlayers} aPlayers={this.state.aPlayers} />}
 
             {!this.state.isLoading && (
                 <Container>

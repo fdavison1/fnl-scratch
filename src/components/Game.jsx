@@ -8,8 +8,8 @@ import GameLeaders from './GameLeaders'
 import Admin from './Admin'
 
 const Container = styled.div`
-display: flex
-justify-content: center`
+display: flex;
+justify-content: center;`
 
 export default class Game extends React.Component{
     state = {

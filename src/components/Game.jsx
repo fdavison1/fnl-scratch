@@ -8,8 +8,8 @@ import GameLeaders from './GameLeaders'
 import Admin from './Admin'
 
 const Container = styled.div`
-display: flex
-justify-content: center`
+display: flex;
+justify-content: center;`
 
 export default class Game extends React.Component{
     state = {
@@ -17,9 +17,11 @@ export default class Game extends React.Component{
         aColor: '',
         aSchool: '',
         aMascot: '',
+        aPlayers: [],
         hColor: '',
         hSchool: '',
-        hMascot: ''
+        hMascot: '',
+        hPlayers: []
     }
 
     componentDidMount(){
@@ -27,13 +29,18 @@ export default class Game extends React.Component{
         axios.get(`/api/game/${id}`).then(res => {
             let a = res.data.data.away 
             let h = res.data.data.home
+            const { status, start_time } = res.data.data
             this.setState({
                 aColor: a.color,
                 aSchool: a.school,
                 aMascot: a.mascot,
+                aPlayers: a.players,
                 hColor: h.color,
                 hSchool: h.school,
                 hMascot: h.mascot,
+                hPlayers: h.players,
+                status: status,
+                start_time: start_time,
                 isLoading: false
             })
         })
@@ -56,7 +63,6 @@ export default class Game extends React.Component{
     }
 
     render(){
-        console.log(this.props.match.params.id)
         return(
             <div>
 
@@ -66,13 +72,15 @@ export default class Game extends React.Component{
 
             {!this.state.isLoading && <Field game={this.state}/>}
 
-            {!this.state.isLoading && <Admin />}
+            {!this.state.isLoading && <Admin hPlayers={this.state.hPlayers} aPlayers={this.state.aPlayers} />}
 
             {!this.state.isLoading && (
                 <Container>
 
                 <GameLeaders game={this.state}/>
                 <Drives />
+
+
 
                 </Container>
             )}

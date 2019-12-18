@@ -71,7 +71,7 @@ export default class Game extends React.Component{
             {!this.state.isLoading && (
                 <Container>
 
-                <GameLeaders />
+                <GameLeaders game={this.state}/>
                 <Drives />
 
                 </Container>

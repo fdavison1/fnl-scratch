@@ -1,7 +1,7 @@
 .trapezoid {
   z-index: 5;
-  width: 400px;
-  height: 75px;
+  width: 600px;
+  height: 100px;
   transform: perspective(5px) rotateX(.5deg);
   background: repeating-linear-gradient(
     90deg,
@@ -9,29 +9,7 @@
     lightgreen 10%
   );
 }
-/* .team-1 {
-  border: solid yellow;
-  z-index: 10;
-  position: relative;
-  writing-mode: vertical-lr;
-  text-orientation: sideways-right;
-  transform: skewX(21deg);
-  left: 465px;
-  top: 15px;
-  color:white;
-} */
-/* .team-2 {
-  border: solid yellow;
-  height: 100px;
-  position: relative;
-  z-index: 11;
-  writing-mode: vertical-lr;
-  text-orientation: mixed;
-  transform: skewX(-20deg) rotate(180deg);
-  margin-left: 14px;
-  margin-top: -40px;
-  color: white;
-} */
+
 #horizontal-list{
   display: flex;
   margin: 0 0;

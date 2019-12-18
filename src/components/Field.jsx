@@ -6,7 +6,6 @@ import goal from "../assets/goal.png";
 // const away = 'blue'
 
 const Wrapper = styled.div`
-margin-left: 40px
 display: flex
 align-items: center
 justify-content: center`
@@ -26,20 +25,20 @@ transform: rotate(90deg)`
 const LeftZone = styled.div`
 display: flex;
 align-items: center;
-margin-top: 4px;
+margin-top: 9px;
 width: 50px;
-height: 76px;
-transform: skew(339deg);
+height: 101px;
+transform: skew(331deg);
 background: ${props => props.color};`
 
 const RightZone = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 5px;
+margin-top: 9px;
 width: 50px;
-height: 76px;
-transform: skew(21deg);
+height: 101px;
+transform: skew(29deg);
 background: ${props => props.color}`
 
 
@@ -56,9 +55,9 @@ export default class Field extends React.Component {
                 <div className="fieldDiv">
                     <img className="goal-post-left" src={goal} alt="" height="100" />
 
-                    <LeftZone color={this.props.game.home.color}><Home>HHS</Home></LeftZone>
+        <LeftZone color={this.props.game.hColor}><Home>{this.props.game.hSchool}</Home></LeftZone>
                     <div className="trapezoid"></div>
-                    <RightZone color={this.props.game.away.color}><Away>THS</Away></RightZone>
+                    <RightZone color={this.props.game.aColor}><Away>{this.props.game.aSchool}</Away></RightZone>
                     {/* <h3 className="team-1">Bears</h3> */}
                     {/* <h3 className="team-2">Tigers</h3> */}
                     {/* <div id="horizontal-list">

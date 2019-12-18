@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Helmet from './Helmet'
-import Field from './Field'
 import { Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
@@ -34,33 +33,30 @@ export default class GamePreview extends React.Component {
     const h = this.props.game.home
     const a = this.props.game.away
     return (
-      
-      <Link to={`/game/${this.props.game._id}`} >
-      <Wrapper
-      >
+      <Link to={`/game/${this.props.game._id}`}>
+        <Wrapper >
           <div className='teams'>
-        <div className='team'>
-          <Helmet color1={h.color} />
-          <div className='school-info'>
-            <h2>Home School: {h.school}</h2>
-            <h2>Mascot: {h.mascot}</h2>
+            <div className='team'>
+              <Helmet color1={h.color} />
+              <div className='school-info'>
+                <h2>Home School: {h.school}</h2>
+                <h2>Mascot: {h.mascot}</h2>
+              </div>
+            </div>
+            <br />
+            <div className='team'>
+              <div className='school-info'>
+                <h2>Away School: {a.school}</h2>
+                <h2>Mascot: {a.mascot}</h2>
+              </div>
+              <Helmet rightHelmet={true} color1={a.color} />
+            </div>
           </div>
-        </div>
-        <br />
-        <div className='team'>
-          <div className='school-info'>
-            <h2>Away School: {a.school}</h2>
-            <h2>Mascot: {a.mascot}</h2>
-          </div>
-          <Helmet rightHelmet={true} color1={a.color} />
-        </div>
-        </div>
 
-        {/* <div className='field-component'>
+          {/* <div className='field-component'>
         <Field game={this.props.game}/>
         </div> */}
-
-      </Wrapper>
+        </Wrapper>
       </Link>
     )
   }

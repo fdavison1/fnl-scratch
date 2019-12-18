@@ -29,6 +29,7 @@ export default class Game extends React.Component{
         axios.get(`/api/game/${id}`).then(res => {
             let a = res.data.data.away 
             let h = res.data.data.home
+            const { status, start_time } = res.data.data
             this.setState({
                 aColor: a.color,
                 aSchool: a.school,
@@ -38,6 +39,8 @@ export default class Game extends React.Component{
                 hSchool: h.school,
                 hMascot: h.mascot,
                 hPlayers: h.players,
+                status: status,
+                start_time: start_time,
                 isLoading: false
             })
         })
@@ -60,7 +63,6 @@ export default class Game extends React.Component{
     }
 
     render(){
-        console.log(this.props.match.params.id)
         return(
             <div>
 
@@ -77,6 +79,8 @@ export default class Game extends React.Component{
 
                 <GameLeaders />
                 <Drives />
+
+
 
                 </Container>
             )}

@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const Game = new Schema(
   {
+    status: {type: String, required: true},
     home: { type: Object, required: true },
     away: { type: Object, required: true },
     city: { type: String, required: true },

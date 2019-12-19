@@ -46,3 +46,11 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+	font-family: 'Digital-7';
+	src: local('Digital-7'), url('./assets/digital-7.ttf');
+}
+
+body {
+	background: #262626;
+}

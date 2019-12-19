@@ -38,9 +38,9 @@ class Map extends React.Component {
     return (
       <>
       <MapPage>
-        <input placeholder="username" />
+        {/* <input placeholder="username" />
         <input placeholder="password" />
-        <button>confirm</button>
+        <button>confirm</button> */}
         <div className="App">
           <USAMap onClick={this.mapHandler} />
           {/* <USAMap onClick={() => {this.toggleModal(); this.mapHandler()}} /> */}
@@ -58,6 +58,7 @@ class Map extends React.Component {
 export default Map;
 
 const MapPage = styled.div `
+background: white;
 path:hover {
     opacity: 0.60;
     cursor:  pointer;

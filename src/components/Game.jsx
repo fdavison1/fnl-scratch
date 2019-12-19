@@ -7,15 +7,19 @@ import Drives from './Drives'
 import GameLeaders from './GameLeaders'
 import Admin from './Admin'
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-`
+const Wrapper = styled.div`
+background: white;
+padding-top: 25px;
+padding-bottom: 150px;
+.container {
+    display: flex;
+    justify-content: center;
+}`
 
 export default class Game extends React.Component {
   state = {
     isLoading: true,
-    game: {},
+    gameObj: {},
     gameId: '',
     aColor: '',
     aSchool: '',
@@ -27,29 +31,29 @@ export default class Game extends React.Component {
     hPlayers: []
   }
 
-  componentDidMount() {
-    let id = this.props.match.params.id
-    axios.get(`/api/game/${id}`).then(res => {
-      let a = res.data.data.away
-      let h = res.data.data.home
-      let game = res.data.data
-
-      this.setState({
-        gameObj: game,
-        gameId: id,
-        aColor: a.color,
-        aSchool: a.school,
-        aMascot: a.mascot,
-        aPlayers: a.players,
-        hColor: h.color,
-        hSchool: h.school,
-        hMascot: h.mascot,
-        hPlayers: h.players,
-        isLoading: false
-      })
-    })
+    componentDidMount(){
+        let id = this.props.match.params.id
+        axios.get(`/api/game/${id}`).then(res => {
+            let a = res.data.data.away 
+            let h = res.data.data.home
+            const { status, start_time,  } = res.data.data
+            this.setState({
+              gameObj: res.data.data,
+              gameId: id,
+              aColor: a.color,
+              aSchool: a.school,
+              aMascot: a.mascot,
+              aPlayers: a.players,
+              hColor: h.color,
+              hSchool: h.school,
+              hMascot: h.mascot,
+              hPlayers: h.players,
+              status: status,
+              start_time: start_time,
+              isLoading: false
+            })
+        })
   }
-
   getGame() {
     let id = this.props.match.params.id
     axios.get(`/api/game/${id}`).then(res => {
@@ -68,7 +72,7 @@ export default class Game extends React.Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         {this.state.isLoading && <h1>Loading...</h1>}
         {!this.state.isLoading && <Scoreboard game={this.state} />}
         {!this.state.isLoading && <Field game={this.state} />}
@@ -80,12 +84,12 @@ export default class Game extends React.Component {
           />
         )}
         {!this.state.isLoading && (
-          <Container>
-            <GameLeaders />
-            <Drives />
-          </Container>
+          <div className='container'>
+            <GameLeaders game={this.state} />
+            <Drives game={this.state.gameObj} />
+          </div>
         )}
-      </div>
+      </Wrapper>
     )
   }
 }

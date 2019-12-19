@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Drive from './Drive'
 
 const Wrapper = styled.div`
-border: 1px solid black
+border: 1px solid black;
 border-radius: 7px;
 margin-left: 25px;
-height: 400px
-width: 475px`
+height: 400px;
+width: 475px;`
 
 export default class Drives extends React.Component{
     state={

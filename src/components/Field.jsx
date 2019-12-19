@@ -50,7 +50,6 @@ export default class Field extends React.Component {
   state = {}
 
   render() {
-    console.log(this.props)
     return (
       <Wrapper>
         <div className='fieldDiv'>

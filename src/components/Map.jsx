@@ -25,7 +25,6 @@ class Map extends React.Component {
   };
 
   mapHandler = event => {
-    console.log(event.target.dataset.name);
     this.setState({
       st: event.target.dataset.name
     });

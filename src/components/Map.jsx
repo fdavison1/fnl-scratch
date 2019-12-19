@@ -39,9 +39,9 @@ class Map extends React.Component {
     return (
       <>
       <MapPage>
-        <input placeholder="username" />
+        {/* <input placeholder="username" />
         <input placeholder="password" />
-        <button>confirm</button>
+        <button>confirm</button> */}
         <div className="App">
           <USAMap onClick={this.mapHandler} />
           {/* <USAMap onClick={() => {this.toggleModal(); this.mapHandler()}} /> */}

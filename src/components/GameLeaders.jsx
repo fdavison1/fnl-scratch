@@ -4,7 +4,8 @@ import Jersey from '../components/Jersey'
 
 const Wrapper = styled.div`
 border: 1px solid black
-height: 300px
+border-radius: 7px;
+height: 400px
 width: 350px`
 
 export default class GameLeaders extends React.Component{

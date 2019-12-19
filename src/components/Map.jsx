@@ -59,6 +59,7 @@ class Map extends React.Component {
 export default Map;
 
 const MapPage = styled.div `
+background: white;
 path:hover {
     opacity: 0.60;
     cursor:  pointer;

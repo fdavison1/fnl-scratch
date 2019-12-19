@@ -7,9 +7,15 @@ import Drives from './Drives'
 import GameLeaders from './GameLeaders'
 import Admin from './Admin'
 
-const Container = styled.div`
-display: flex;
-justify-content: center;`
+const Wrapper = styled.div`
+background: white;
+padding-top: 25px;
+padding-bottom: 150px;
+.container {
+    display: flex;
+    justify-content: center;
+}`
+
 
 export default class Game extends React.Component{
     state = {
@@ -21,7 +27,16 @@ export default class Game extends React.Component{
         hColor: '',
         hSchool: '',
         hMascot: '',
-        hPlayers: []
+        hPlayers: [],
+        drives: [
+            {
+                index: 1,  
+                plays:[{index: 1}, {index: 2}, {index: 3}, {index: 4}]
+            },
+            {
+                index: 2,
+                plays: [{index: 1}]},
+        ]
     }
 
     componentDidMount(){
@@ -29,7 +44,7 @@ export default class Game extends React.Component{
         axios.get(`/api/game/${id}`).then(res => {
             let a = res.data.data.away 
             let h = res.data.data.home
-            const { status, start_time } = res.data.data
+            const { status, start_time, drives } = res.data.data
             this.setState({
                 aColor: a.color,
                 aSchool: a.school,
@@ -41,6 +56,7 @@ export default class Game extends React.Component{
                 hPlayers: h.players,
                 status: status,
                 start_time: start_time,
+                // drives: drives,
                 isLoading: false
             })
         })
@@ -64,7 +80,7 @@ export default class Game extends React.Component{
 
     render(){
         return(
-            <div>
+            <Wrapper>
 
             {this.state.isLoading && <h1>Loading...</h1>}
 
@@ -75,17 +91,17 @@ export default class Game extends React.Component{
             {!this.state.isLoading && <Admin hPlayers={this.state.hPlayers} aPlayers={this.state.aPlayers} />}
 
             {!this.state.isLoading && (
-                <Container>
+                <div className='container'>
 
                 <GameLeaders game={this.state}/>
-                <Drives />
+                <Drives game={this.state}/>
 
 
 
-                </Container>
+                </div>
             )}
 
-            </div>
+            </Wrapper>
         )
     }
 }

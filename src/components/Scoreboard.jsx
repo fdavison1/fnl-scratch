@@ -6,49 +6,48 @@ import "../assets/digital-7.ttf"
 const Wrapper = styled.div`
 border: 1px solid black;
 display: flex;
-  width: 700px;
-  margin: 25px auto;
-  background: white;
-  border-radius: 7px;
-  box-sizing: border-box;
-  .school-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .team {
-    display: flex;
-  }
-  .teams {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .field-component {
-    display: flex;
-  }
-  .clock {
-    display: flex;
-      align-items: center;
-      font-family: Digital-7;
-      font-size: 3rem;
-      justify-content: center;
-    }
-    .clockContainer {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      justify-content: center;
-  }
-  #title {
-    font-family: sans-serif;
-    font-size: 1rem;
-  }
-  .score {
-    font-size: 4rem;
-    font-family: Digital-7;
-  }`
+width: 700px;
+margin: 25px auto;
+border-radius: 7px;
+box-sizing: border-box;
+.school-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.team {
+  display: flex;
+}
+.teams {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.field-component {
+  display: flex;
+}
+.clock {
+  display: flex;
+  align-items: center;
+  font-family: Digital-7;
+  font-size: 3rem;
+  justify-content: center;
+}
+.clockContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
+#title {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+.score {
+  font-size: 4rem;
+  font-family: Digital-7;
+}`
   
   
   

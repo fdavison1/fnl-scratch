@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const DriveSchema = require('./drive-model')
+const DriveSchema = require('./drive-schema')
+const DriveModel = require('./drive-model')
 
 module.exports = {
   GameSchema: new Schema({
@@ -12,7 +13,7 @@ module.exports = {
     start_time: { type: String, required: false },
     date: { type: Date, required: true },
     // Date − This datatype is used to store the current date or time in UNIX time format. You can specify your own date time by creating object of Date and passing day, month, year into it.
-    drives: [DriveSchema]
+    drivesArr: [DriveSchema]
   }),
   GameModel: mongoose.model(
     'game',

@@ -1,5 +1,6 @@
-const { GameSchema, GameModel } = require('../models/game-model')
-const DriveSchema = require('../models/drive-model')
+const { GameModel } = require('../models/game-model')
+// const DriveSchema = require('../models/drive-model')
+const DriveModel = require('../models/drive-model')
 
 module.exports = {
   getGames: async (req, res) => {
@@ -87,6 +88,7 @@ module.exports = {
   },
   updateDrives: (req, res) => {
     const { id, drive } = req.body
+    console.log(drive)
 
     GameModel.findOne({ _id: id }, async (err, gameRes) => {
       if (err) {
@@ -98,8 +100,34 @@ module.exports = {
       gameRes.drivesArr.push(drive)
       gameRes
         .save()
-        .then(result => res.status(200).json(result))
+        .then(result => {
+          res.status(200).json(result)
+        })
         .catch(err => console.log(err))
+    })
+  },
+  addPlay: (req, res) => {
+    const { playObj, driveId, gameId } = req.body
+    console.log(req.body)
+    GameModel.findOne({ _id: gameId }, async (err, game) => {
+      if (err) {
+        return res.status(404).json({
+          err,
+          message: 'Game not found!'
+        })
+      }
+      const drive = await game.drivesArr.id(driveId)
+        drive.plays.push(playObj)
+        game
+          .save()
+          .then(result => {
+            console.log(result)
+            
+            res.status(200).json(result)
+          })
+          .catch(err => console.log(err))
+
+      
     })
   }
 }

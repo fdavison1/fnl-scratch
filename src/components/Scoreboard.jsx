@@ -84,14 +84,14 @@ export default class Scoreboard extends React.Component {
             <div className='clock'>
             <div className="numbers">
               <p className="hours"></p>
-              <p class="placeholder">88</p>
+              <p className="placeholder">88</p>
             </div>
-            <div class="colon">
+            <div className="colon">
               <p>:</p>
             </div>
             <div className="numbers">
               <p className="minutes"></p>
-              <p class="placeholder">88</p>
+              <p className="placeholder">88</p>
             </div>
             </div>
                       </>}

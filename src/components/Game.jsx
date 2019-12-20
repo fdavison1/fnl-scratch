@@ -34,9 +34,11 @@ export default class Game extends React.Component {
     componentDidMount(){
         let id = this.props.match.params.id
         axios.get(`/api/game/${id}`).then(res => {
+            console.log(res.data.data)
+            
             let a = res.data.data.away 
             let h = res.data.data.home
-            const { status, start_time,  } = res.data.data
+            const { status, start_time } = res.data.data
             this.setState({
               gameObj: res.data.data,
               gameId: id,
@@ -69,8 +71,15 @@ export default class Game extends React.Component {
       })
     })
   }
+  updateGame = (game) => {
+      this.setState({ gameObj: game });
+
+  }
 
   render() {
+   console.log(this.state.gameObj)
+   
+    
     return (
       <Wrapper>
         {this.state.isLoading && <h1>Loading...</h1>}
@@ -78,6 +87,7 @@ export default class Game extends React.Component {
         {!this.state.isLoading && <Field game={this.state} />}
         {!this.state.isLoading && (
           <Admin
+          updateGame={this.updateGame}
             game={this.state.gameObj}
             hPlayers={this.state.hPlayers}
             aPlayers={this.state.aPlayers}

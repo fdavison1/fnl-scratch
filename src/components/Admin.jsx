@@ -33,7 +33,7 @@ export default class Admin extends React.Component {
     min: '',
     sec: '',
     quarter: '',
-
+    playCount: 1,
     showAfterTD: false,
     afterTD: '',
     kicker: '',
@@ -93,7 +93,8 @@ export default class Admin extends React.Component {
       result,
       min,
       sec,
-      quarter
+      quarter,
+      playCount
     } = this.state
     axios.put(`/api/game/play`, {
       driveId,
@@ -107,8 +108,9 @@ export default class Admin extends React.Component {
         result,
         min,
         sec,
-        quarter
-      }
+        quarter,
+        playCount
+    }
     })
   }
 

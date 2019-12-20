@@ -33,4 +33,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 //ENDPOINTS
 app.get('/api/games/:state', g.getGames)
 app.get('/api/game/:id', g.getGame)
-// app.put('/api/games', ctrl.updateGame)
+app.put('/api/game', g.updateGame)
+app.put('/api/game/play', g.addPlay)
+app.put('/api/game/drive', g.updateDrives)

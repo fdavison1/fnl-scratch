@@ -17,7 +17,7 @@ export default class Drives extends React.Component{
         const { drives } = this.props.game
         return(
             <Wrapper>
-                <h1>Drives!</h1>
+                {/* <h1>Drives!</h1>
 
                 {drives.length === 0 ? 'No drives yet' :
                 <div className='drives'>
@@ -25,7 +25,7 @@ export default class Drives extends React.Component{
                     {drives.map(drive => <Drive key={drive.index} drive={drive}/>)}
 
 
-                </div>}
+                </div>} */}
 
 
             </Wrapper>

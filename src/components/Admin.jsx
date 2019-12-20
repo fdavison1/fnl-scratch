@@ -31,6 +31,7 @@ export default class Admin extends React.Component {
     min: '',
     sec: '',
     quarter: '',
+    playCount: 1,
     showAfterTD: false,
     afterTD: '',
     kicker: '',
@@ -63,12 +64,17 @@ export default class Admin extends React.Component {
         drive: { driveCount, team, fieldSide, yardLine, plays: [] }
       })
       .then(res => {
+       const idLoc = res.data.drivesArr.length - 1
+       console.log(idLoc)
+       
         this.setState({
           driveCount: driveCount + 1,
           showAddDrive: false,
           showAddPlay: true,
-          game: res.data
+          game: res.data,
+          driveId: res.data.drivesArr[idLoc]._id
         })
+        this.props.updateGame(res.data)
       })
       .catch(err => console.log(err))
   }
@@ -76,6 +82,7 @@ export default class Admin extends React.Component {
   submitPlay = () => {
     const {
       gameId,
+      driveId,
       playType,
       gainLoss,
       playDist,
@@ -84,24 +91,30 @@ export default class Admin extends React.Component {
       result,
       min,
       sec,
-      quarter
+      quarter,
+      playCount
     } = this.state
-    axios.put(`/api/game/${this.state.gameId}`, {
+    axios.put(`/api/game/play`, {
+      driveId,
       gameId,
-      playType,
-      gainLoss,
-      playDist,
-      player1,
-      player2,
-      result,
-      min,
-      sec,
-      quarter
+      playObj:{
+        playType,
+        gainLoss,
+        playDist,
+        player1,
+        player2,
+        result,
+        min,
+        sec,
+        quarter,
+        playCount
+    }
     })
   }
 
   render() {
-
+    console.log(this.props)
+    
     return (
       <Wrapper>
           {/* Add drive inputs */}
@@ -258,7 +271,7 @@ export default class Admin extends React.Component {
               <option value='3rd'>3rd</option>
               <option value='4th'>4th</option>
             </select>
-            <button>Submit</button>
+            <button onClick={() => this.submitPlay()} >Submit</button>
           </div>
         )}
         {/* After TD play inputs */}

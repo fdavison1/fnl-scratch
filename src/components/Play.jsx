@@ -19,12 +19,8 @@ export default class Play extends React.Component{
         const { play } = this.props
         return(
             <Wrapper>
-             
-            <h1>play {play.index}:</h1>
-            <p>{returnText()}</p>
-
-            
-
+            <h1>play {play.playCount}:</h1>
+            {returnText(play)}
             </Wrapper>
         )
     }

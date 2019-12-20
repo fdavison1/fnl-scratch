@@ -15,14 +15,14 @@ export default class Admin extends React.Component {
     gameId: '',
     home: [],
     away: [],
-    
+
     showAddDrive: true,
     team: '',
     fieldSide: '',
     yardLine: '',
     driveId: '',
     driveCount: 1,
-    
+
     showAddPlay: false,
     playType: '',
     gainLoss: '',
@@ -33,7 +33,7 @@ export default class Admin extends React.Component {
     min: '',
     sec: '',
     quarter: '',
-    
+
     showAfterTD: false,
     afterTD: '',
     kicker: '',
@@ -66,9 +66,9 @@ export default class Admin extends React.Component {
         drive: { driveCount, team, fieldSide, yardLine, plays: [] }
       })
       .then(res => {
-       const idLoc = res.data.drivesArr.length - 1
-       console.log(idLoc)
-       
+        const idLoc = res.data.drivesArr.length - 1
+        console.log(idLoc)
+
         this.setState({
           driveCount: driveCount + 1,
           showAddDrive: false,
@@ -98,25 +98,26 @@ export default class Admin extends React.Component {
     axios.put(`/api/game/play`, {
       driveId,
       gameId,
-      playObj:{
+      playObj: {
         playType,
-      gainLoss,
-      playDist,
-      player1,
-      player2,
-      result,
-      min,
-      sec,
-      quarter}
+        gainLoss,
+        playDist,
+        player1,
+        player2,
+        result,
+        min,
+        sec,
+        quarter
+      }
     })
   }
 
   render() {
     console.log(this.props)
-    
+
     return (
       <Wrapper>
-          {/* Add drive inputs */}
+        {/* Add drive inputs */}
         {this.state.showAddDrive && (
           <div className='new-drive'>
             <select
@@ -192,11 +193,11 @@ export default class Admin extends React.Component {
             <datalist id='player1'>
               {this.state.team === 'home'
                 ? this.state.home.map(player => (
-                    <option value={player.last_name}>{player.position}</option>
-                  ))
+                  <option value={player.last_name}>{player.position}</option>
+                ))
                 : this.state.away.map(player => (
-                    <option value={player.last_name}>{player.position}</option>
-                  ))}
+                  <option value={player.last_name}>{player.position}</option>
+                ))}
             </datalist>
             {this.state.playType === 'pass' && (
               <>
@@ -209,15 +210,15 @@ export default class Admin extends React.Component {
                 <datalist id='player2'>
                   {this.state.team === 'home'
                     ? this.state.home.map((player, i) => (
-                        <option key={i} value={player.last_name}>
-                          {player.position}
-                        </option>
-                      ))
+                      <option key={i} value={player.last_name}>
+                        {player.position}
+                      </option>
+                    ))
                     : this.state.away.map((player, i) => (
-                        <option key={i} value={player.last_name}>
-                          {player.position}
-                        </option>
-                      ))}
+                      <option key={i} value={player.last_name}>
+                        {player.position}
+                      </option>
+                    ))}
                 </datalist>
               </>
             )}
@@ -292,15 +293,15 @@ export default class Admin extends React.Component {
                 <datalist id='kicker'>
                   {this.state.team === 'home'
                     ? this.state.home.map((player, i) => (
-                        <option key={i} value={player.last_name}>
-                          {player.position}
-                        </option>
-                      ))
+                      <option key={i} value={player.last_name}>
+                        {player.position}
+                      </option>
+                    ))
                     : this.state.away.map((player, i) => (
-                        <option key={i} value={player.last_name}>
-                          {player.position}
-                        </option>
-                      ))}
+                      <option key={i} value={player.last_name}>
+                        {player.position}
+                      </option>
+                    ))}
                 </datalist>
                 <select
                   onChange={e => this.handleChange(e.target)}
@@ -321,89 +322,89 @@ export default class Admin extends React.Component {
                     <datalist id='patBlocker'>
                       {this.state.team === 'away'
                         ? this.state.home.map((player, i) => (
-                            <option key={i} value={player.last_name}>
-                              {player.position}
-                            </option>
-                          ))
+                          <option key={i} value={player.last_name}>
+                            {player.position}
+                          </option>
+                        ))
                         : this.state.away.map((player, i) => (
-                            <option key={i} value={player.last_name}>
-                              {player.position}
-                            </option>
-                          ))}
+                          <option key={i} value={player.last_name}>
+                            {player.position}
+                          </option>
+                        ))}
                     </datalist>
                     <button>Submit</button>
                   </>
                 )}
               </>
             ) : (
-              // 2 point conversion play section
-              this.state.afterTD === '2pt' && (
-                <div className='2pt-play'>
-                  <select
-                    onChange={e => this.handleChange(e.target)}
-                    name='playType'
-                    placeholder='Play Type'
-                    list='play-type'>
-                    <option>Play Type</option>
-                    <option value='run'>Run</option>
-                    <option value='pass'>Pass</option>
-                    <option value='sack'>Sack</option>
-                    <option value='incompletePass'>Incomplete Pass</option>
-                    <option value='kick'>Kick</option>
-                  </select>
-                  <input
-                    onChange={e => this.handleChange(e.target)}
-                    name='player1'
-                    placeholder={
-                      this.state.playType === 'pass' ? 'Passer' : 'Runner'
-                    }
-                    list='player1'
-                  />
-                  <datalist id='player1'>
-                    {this.state.team === 'home'
-                      ? this.state.home.map((player, i) => (
+                // 2 point conversion play section
+                this.state.afterTD === '2pt' && (
+                  <div className='2pt-play'>
+                    <select
+                      onChange={e => this.handleChange(e.target)}
+                      name='playType'
+                      placeholder='Play Type'
+                      list='play-type'>
+                      <option>Play Type</option>
+                      <option value='run'>Run</option>
+                      <option value='pass'>Pass</option>
+                      <option value='sack'>Sack</option>
+                      <option value='incompletePass'>Incomplete Pass</option>
+                      <option value='kick'>Kick</option>
+                    </select>
+                    <input
+                      onChange={e => this.handleChange(e.target)}
+                      name='player1'
+                      placeholder={
+                        this.state.playType === 'pass' ? 'Passer' : 'Runner'
+                      }
+                      list='player1'
+                    />
+                    <datalist id='player1'>
+                      {this.state.team === 'home'
+                        ? this.state.home.map((player, i) => (
                           <option key={i} value={player.last_name}>
                             {player.position}
                           </option>
                         ))
-                      : this.state.away.map((player, i) => (
+                        : this.state.away.map((player, i) => (
                           <option key={i} value={player.last_name}>
                             {player.position}
                           </option>
                         ))}
-                  </datalist>
-                  {this.state.playType === 'pass' && (
-                    <>
-                      <input
-                        onChange={e => this.handleChange(e.target)}
-                        name='player2'
-                        placeholder='Receiver'
-                        list='player2'
-                      />
-                      <datalist id='player2'>
-                        {this.state.team === 'home'
-                          ? this.state.home.map((player, i) => (
+                    </datalist>
+                    {this.state.playType === 'pass' && (
+                      <>
+                        <input
+                          onChange={e => this.handleChange(e.target)}
+                          name='player2'
+                          placeholder='Receiver'
+                          list='player2'
+                        />
+                        <datalist id='player2'>
+                          {this.state.team === 'home'
+                            ? this.state.home.map((player, i) => (
                               <option key={i} value={player.last_name}>
                                 {player.position}
                               </option>
                             ))
-                          : this.state.away.map((player, i) => (
+                            : this.state.away.map((player, i) => (
                               <option key={i} value={player.last_name}>
                                 {player.position}
                               </option>
                             ))}
-                      </datalist>
-                    </>
-                  )}
-                  <select>
-                    <option>2pt Result</option>
-                    <option value='good'>Good</option>
-                    <option value='failed'>Failed</option>
-                  </select>
-                  <button>Submit</button>
-                </div>
-              )
-            )}
+                        </datalist>
+                      </>
+                    )}
+                    <select>
+                      <option>2pt Result</option>
+                      <option value='good'>Good</option>
+                      <option value='failed'>Failed</option>
+                    </select>
+                    <button>Submit</button>
+                  </div>
+                )
+              )}
           </div>
         )}
       </Wrapper>

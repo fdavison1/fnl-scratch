@@ -15,12 +15,14 @@ export default class Admin extends React.Component {
     gameId: '',
     home: [],
     away: [],
+    
     showAddDrive: true,
     team: '',
     fieldSide: '',
     yardLine: '',
     driveId: '',
     driveCount: 1,
+    
     showAddPlay: false,
     playType: '',
     gainLoss: '',
@@ -31,6 +33,7 @@ export default class Admin extends React.Component {
     min: '',
     sec: '',
     quarter: '',
+    
     showAfterTD: false,
     afterTD: '',
     kicker: '',

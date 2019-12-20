@@ -19,7 +19,6 @@ export default class Drives extends React.Component{
         const { drivesArr } = this.props.game
         return(
             <Wrapper>
-                <h1>Drives!</h1>
                 {drivesArr.length === 0 ? 'No drives yet' :
                 <div className='drives'>   
                     {drivesArr.map(drive => <Drive teamObj={this.props.game[drive.team]} key={drive.driveCount} drive={drive}/>)}

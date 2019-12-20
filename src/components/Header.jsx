@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Frijole&display=swap');
 display: flex;
 justify-content: center;
-align-items: center
+align-items: center;
 height: 100px;
 box-sizing: border-box;
 background: #262626;

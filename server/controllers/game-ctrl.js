@@ -48,6 +48,7 @@ module.exports = {
 
   updateGame: async (req, res) => {
     const body = req.body
+    console.log(body)
     if (!body) {
       return res.status(400).json({
         success: false,
@@ -68,7 +69,8 @@ module.exports = {
       game.state = body.state
       game.start_time = body.start_time
       game.date = body.date
-      game.drivesArr = body.drives
+      game.drivesArr = body.drivesArr
+      game.score = body.score
       game
         .save()
         .then(gameRes => {
@@ -88,7 +90,7 @@ module.exports = {
   },
   updateDrives: (req, res) => {
     const { id, drive } = req.body
-    console.log(drive)
+    // console.log(drive)
 
     GameModel.findOne({ _id: id }, async (err, gameRes) => {
       if (err) {

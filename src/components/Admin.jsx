@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import PlayInputs from './PlayInputs'
+import AfterTDInputs from './AfterTDInputs'
 
 const Wrapper = styled.div`
   margin: 15px auto;
@@ -32,8 +34,10 @@ export default class Admin extends React.Component {
     result: '',
     min: '',
     sec: '',
-    quarter: '',
+    quarter: 'first',
+    kickType: '',
     playCount: 1,
+    
     showAfterTD: false,
     afterTD: '',
     kicker: '',
@@ -53,10 +57,9 @@ export default class Admin extends React.Component {
 
   handleChange = trg => {
     this.setState({ [trg.name]: trg.value })
-    if (trg.value === 'touchdown') {
-      this.setState({ showAfterTD: true })
-    }
+    
   }
+
 
   submitDrive = () => {
     const { gameId, driveCount, team, fieldSide, yardLine } = this.state
@@ -67,7 +70,7 @@ export default class Admin extends React.Component {
       })
       .then(res => {
         const idLoc = res.data.drivesArr.length - 1
-        console.log(idLoc)
+        // console.log(idLoc)
 
         this.setState({
           driveCount: driveCount + 1,
@@ -81,7 +84,62 @@ export default class Admin extends React.Component {
       .catch(err => console.log(err))
   }
 
-  submitPlay = () => {
+  addScore = ( ) => {
+    let { team, result, quarter } = this.state
+    let { score } = this.props
+    let points = 0
+
+    console.log(this.props)
+    console.log(score)
+
+  // let newPoints = {...score, []: {...team, [quarter]:[...quarter, points]}}
+
+ 
+
+  console.log(score[team][quarter])
+    
+    //extra point
+    if (result === 'extra point'){
+      points = 1
+    }
+
+    //2-pt
+    if (result === '2 point'){
+      points = 2
+    }
+
+    //FG
+    if (result === 'field goal'){
+      points = 3
+    }
+
+    //TD
+    if (result === 'touchdown'){
+      points = 6
+    }
+
+    //safety
+    if (result === 'safety'){
+      points = 2
+    }
+    let addPoints = score[team][quarter]
+    addPoints.push(points)
+    let newPoints = {...score}
+
+    console.log(newPoints)
+
+    
+
+    axios.put('/api/game', {...this.state.game, score: newPoints}).then(res => {
+      console.log(res)
+      this.props.updateGame(res.data.game)
+    })
+    
+
+    
+  }
+
+  submitPlay = async () => {
     const {
       gameId,
       driveId,
@@ -94,8 +152,12 @@ export default class Admin extends React.Component {
       min,
       sec,
       quarter,
+      kickType,
       playCount
     } = this.state
+
+    await this.addScore()
+
     axios.put(`/api/game/play`, {
       driveId,
       gameId,
@@ -109,13 +171,40 @@ export default class Admin extends React.Component {
         min,
         sec,
         quarter,
+        kickType,
         playCount
-    }
+      }
+
+    }).then(res => {
+      console.log(res.data)
+
+      if (this.state.result === 'touchdown') {
+        this.setState({ 
+          showAfterTD: true,
+          showAddPlay: false, 
+        })
+      }
+    
+      this.setState({
+        playType: '',
+        gainLoss: '',
+        playDist: '',
+        player1: '',
+        player2: '',
+        result: ''
+      }, () => this.props.updateGame(res.data))
+      // this.props.updateGame(res.data)
     })
   }
 
+  showAfterTD = () => {
+
+    this.setState({ showAfterTD: true })
+
+  }
+
   render() {
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <Wrapper>
@@ -154,7 +243,18 @@ export default class Admin extends React.Component {
           </div>
         )}
         {/* Add play inputs */}
-        {this.state.showAddPlay && (
+
+
+
+
+
+
+
+
+
+
+
+        {/* {this.state.showAddPlay && (
           <div className='add-play'>
             <select
               onChange={e => this.handleChange(e.target)}
@@ -275,8 +375,10 @@ export default class Admin extends React.Component {
             </select>
             <button onClick={() => this.submitPlay()} >Submit</button>
           </div>
-        )}
-        {/* After TD play inputs */}
+        )} */}
+        
+        
+        {/* After TD play inputs
         {this.state.showAfterTD && (
           <div>
             <select onChange={e => this.handleChange(e.target)} name='afterTD'>
@@ -408,7 +510,45 @@ export default class Admin extends React.Component {
                 )
               )}
           </div>
-        )}
+        )} */}
+
+
+<AfterTDInputs admin={this.state} handleChange={this.handleChange}/>
+
+
+{this.state.showAddPlay && (
+
+
+<div>
+
+  <select
+    onChange={e => this.handleChange(e.target)}
+    name='playType'
+    placeholder='Play Type'
+    value={this.state.playType}
+    list='play-type'>
+    <option>Play Type</option>
+    <option value='run'>Run</option>
+    <option value='pass'>Pass</option>
+    <option value='sack'>Sack</option>
+    <option value='incomplete pass'>Incomplete Pass</option>
+    <option value='kick'>Kick</option>
+  </select>
+
+
+
+
+  {this.state.playType &&
+
+    <PlayInputs
+      handleChange={this.handleChange}
+      adminState={this.state}
+      submitPlay={this.submitPlay}
+    />}
+
+
+</div>)
+}
       </Wrapper>
     )
   }

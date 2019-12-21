@@ -34,6 +34,9 @@ background: lightgray;
   font-family: Digital-7;
   font-size: 3rem;
   justify-content: center;
+  /* border: 1px solid black; */
+  background: white;
+  border-radius: 5px;
 }
 .clockContainer {
   display: flex;
@@ -51,11 +54,11 @@ background: lightgray;
 }
 .box-score {
   display: flex;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
   padding: 3px 5px;
   margin-bottom: 3px;
-  background: white;
+  /* background: white; */
 }
 .quarter {
   display: flex;
@@ -72,6 +75,8 @@ span {
 
 export default class Scoreboard extends React.Component {
   state = {
+    min: '15',
+    sec: '00',
     hScore: 0,
     aScore: 0,
     hs1: 0,
@@ -146,9 +151,7 @@ export default class Scoreboard extends React.Component {
   }
 
   render() {
-console.log(this.props.game)
-
-
+    
     const {
       aColor,
       aSchool,
@@ -187,6 +190,22 @@ console.log(this.props.game)
             {this.props.game.status === 'inProgress' && <>
 
 
+
+              <h1 id='title'>Time Remaining:</h1>
+
+              <div className='clock'>
+                <div className="numbers">
+                  <p className="hours"></p>
+                  <p className="placeholder">{this.state.min}</p>
+                </div>
+                <div className="colon">
+                  <p>:</p>
+                </div>
+                <div className="numbers">
+                  <p className="minutes"></p>
+                  <p className="placeholder">{this.state.sec}</p>
+                </div>
+              </div>
               <div className='box-score'>
                 <div className='quarter'>
                   <p><span>Team</span></p>
@@ -219,22 +238,6 @@ console.log(this.props.game)
                 </div>
 
 
-              </div>
-
-              <h1 id='title'>Time Remaining:</h1>
-
-              <div className='clock'>
-                <div className="numbers">
-                  <p className="hours"></p>
-                  <p className="placeholder">88</p>
-                </div>
-                <div className="colon">
-                  <p>:</p>
-                </div>
-                <div className="numbers">
-                  <p className="minutes"></p>
-                  <p className="placeholder">88</p>
-                </div>
               </div>
             </>}
 

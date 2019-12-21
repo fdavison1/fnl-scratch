@@ -34,12 +34,12 @@ export default class AfterTDInputs extends React.Component{
     />
     <datalist id='kicker'>
       {admin.team === 'home'
-        ? admin.home.map((player, i) => (
+        ? admin.game.home.players.map((player, i) => (
           <option key={i} value={player.last_name}>
             {player.position}
           </option>
         ))
-        : admin.away.map((player, i) => (
+        : admin.game.away.players.map((player, i) => (
           <option key={i} value={player.last_name}>
             {player.position}
           </option>
@@ -63,12 +63,12 @@ export default class AfterTDInputs extends React.Component{
         />
         <datalist id='patBlocker'>
           {admin.team === 'away'
-            ? admin.home.map((player, i) => (
+            ? admin.game.home.players.map((player, i) => (
               <option key={i} value={player.last_name}>
                 {player.position}
               </option>
             ))
-            : admin.away.map((player, i) => (
+            : admin.game.away.players.map((player, i) => (
               <option key={i} value={player.last_name}>
                 {player.position}
               </option>
@@ -104,12 +104,12 @@ export default class AfterTDInputs extends React.Component{
         />
         <datalist id='player1'>
           {admin.team === 'home'
-            ? admin.home.map((player, i) => (
+            ? admin.game.home.players.map((player, i) => (
               <option key={i} value={player.last_name}>
                 {player.position}
               </option>
             ))
-            : admin.away.map((player, i) => (
+            : admin.game.away.players.map((player, i) => (
               <option key={i} value={player.last_name}>
                 {player.position}
               </option>
@@ -125,12 +125,12 @@ export default class AfterTDInputs extends React.Component{
             />
             <datalist id='player2'>
               {admin.team === 'home'
-                ? admin.home.map((player, i) => (
+                ? admin.game.home.players.map((player, i) => (
                   <option key={i} value={player.last_name}>
                     {player.position}
                   </option>
                 ))
-                : admin.away.map((player, i) => (
+                : admin.game.away.players.map((player, i) => (
                   <option key={i} value={player.last_name}>
                     {player.position}
                   </option>
@@ -147,7 +147,7 @@ export default class AfterTDInputs extends React.Component{
       </div>
     )
   )}
-        {admin.afterTD && <SubmitButton title='End Drive' submitPlay={this.props.submitPlay}/>}
+        {admin.afterTD && <SubmitButton title='End Drive' addScore={this.props.addScore}/>}
 
             </Wrapper>
         )

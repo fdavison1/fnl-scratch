@@ -11,7 +11,7 @@ const SubmitButton = props => {
 
 
     <Button
-    onClick={()=>props.submitPlay()}
+    onClick={()=>props.addScore()}
     >{props.title}</Button>
 
 

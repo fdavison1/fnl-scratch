@@ -38,8 +38,8 @@ showPlays(){
             </h1>
             {(this.props.selectedDrive === drive.driveCount) && (
               <div className='plays'>
-                {drive.plays.map(play => (
-                  <Play key={play.index} play={play} />
+                {drive.plays.map((play, i) => (
+                  <Play key={i} play={play} />
                 ))}
               </div>
             )}

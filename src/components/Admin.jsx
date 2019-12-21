@@ -15,9 +15,7 @@ export default class Admin extends React.Component {
   state = {
     game: {},
     gameId: '',
-    home: [],
-    away: [],
-
+   
     showAddDrive: true,
     team: '',
     fieldSide: '',
@@ -37,7 +35,7 @@ export default class Admin extends React.Component {
     quarter: 'first',
     kickType: '',
     playCount: 1,
-    
+
     showAfterTD: false,
     afterTD: '',
     kicker: '',
@@ -49,17 +47,13 @@ export default class Admin extends React.Component {
     this.setState({
       driveCount: this.props.game.drivesArr.length + 1,
       game: this.props.game,
-      gameId: this.props.game._id,
-      home: this.props.hPlayers,
-      away: this.props.aPlayers
+      gameId: this.props.game._id
     })
   }
 
   handleChange = trg => {
     this.setState({ [trg.name]: trg.value })
-    
   }
-
 
   submitDrive = () => {
     const { gameId, driveCount, team, fieldSide, yardLine } = this.state
@@ -70,8 +64,6 @@ export default class Admin extends React.Component {
       })
       .then(res => {
         const idLoc = res.data.drivesArr.length - 1
-        // console.log(idLoc)
-
         this.setState({
           driveCount: driveCount + 1,
           showAddDrive: false,
@@ -84,62 +76,52 @@ export default class Admin extends React.Component {
       .catch(err => console.log(err))
   }
 
-  addScore = ( ) => {
+  addScore = () => {
     let { team, result, quarter } = this.state
-    let { score } = this.props
+    let { score } = this.props.game
     let points = 0
-
-    console.log(this.props)
-    console.log(score)
-
-  // let newPoints = {...score, []: {...team, [quarter]:[...quarter, points]}}
-
- 
-
-  console.log(score[team][quarter])
-    
     //extra point
-    if (result === 'extra point'){
+    if (result === 'extra point') {
       points = 1
+      this.setState({ showAddDrive: true,
+      showAfterTD: false })
     }
 
     //2-pt
-    if (result === '2 point'){
+    if (result === '2 point') {
       points = 2
+      this.setState({ showAddDrive: true, showAfterTD: false })
     }
 
     //FG
-    if (result === 'field goal'){
+    if (result === 'Successful') {
       points = 3
+      this.setState({ showAddDrive: true })
     }
 
     //TD
-    if (result === 'touchdown'){
+    if (result === 'touchdown') {
       points = 6
     }
 
     //safety
-    if (result === 'safety'){
+    if (result === 'safety') {
       points = 2
+      team === 'home' ? team = 'away' : team = 'home'
+      this.setState({ showAddDrive: true })
     }
-    let addPoints = score[team][quarter]
-    addPoints.push(points)
-    let newPoints = {...score}
-
-    console.log(newPoints)
-
-    
-
-    axios.put('/api/game', {...this.state.game, score: newPoints}).then(res => {
-      console.log(res)
-      this.props.updateGame(res.data.game)
-    })
-    
-
-    
+    if (points > 0) {
+      let addPoints = score[team][quarter]
+      addPoints.push(points)
+      let newPoints = { ...score }
+      this.submitPlay(newPoints)
+    }else {
+      this.setState({ showAddPlay: true, playCount: this.playCount + 1 });
+      this.submitPlay()
+    }
   }
 
-  submitPlay = async () => {
+  submitPlay = async (scoreObj) => {
     const {
       gameId,
       driveId,
@@ -155,14 +137,8 @@ export default class Admin extends React.Component {
       kickType,
       playCount
     } = this.state
-
-    await this.addScore()
-
-    axios.put(`/api/game/play`, {
-      driveId,
-      gameId,
-      playObj: {
-        playType,
+    let playObj = {
+      playType,
         gainLoss,
         playDist,
         player1,
@@ -173,38 +149,44 @@ export default class Admin extends React.Component {
         quarter,
         kickType,
         playCount
-      }
-
-    }).then(res => {
-      console.log(res.data)
-
-      if (this.state.result === 'touchdown') {
-        this.setState({ 
-          showAfterTD: true,
-          showAddPlay: false, 
+    }
+    this.setState({ game: {...this.state.game, score: scoreObj } }, () => {
+      
+      axios
+        .put(`/api/game`, {
+          driveId,
+          gameId,
+          playObj,
+          scoreObj
+          
         })
-      }
-    
-      this.setState({
-        playType: '',
-        gainLoss: '',
-        playDist: '',
-        player1: '',
-        player2: '',
-        result: ''
-      }, () => this.props.updateGame(res.data))
-      // this.props.updateGame(res.data)
+        .then(res => {
+  
+          if (this.state.result === 'touchdown') {
+            this.setState({
+              showAfterTD: true,
+              showAddPlay: false
+            })
+          }
+          this.setState(
+            {
+              playType: '',
+              gainLoss: '',
+              playDist: '',
+              player1: '',
+              player2: '',
+              result: ''
+            })
+          this.props.updateGame(res.data.game)
+        })
     })
   }
 
   showAfterTD = () => {
-
     this.setState({ showAfterTD: true })
-
   }
 
   render() {
-    // console.log(this.props)
 
     return (
       <Wrapper>
@@ -242,313 +224,34 @@ export default class Admin extends React.Component {
             <button onClick={() => this.submitDrive()}>Submit</button>
           </div>
         )}
-        {/* Add play inputs */}
+        
+        <AfterTDInputs admin={this.state} handleChange={this.handleChange} addScore={this.addScore}/>
 
-
-
-
-
-
-
-
-
-
-
-        {/* {this.state.showAddPlay && (
-          <div className='add-play'>
+        {this.state.showAddPlay && (
+          <div>
             <select
               onChange={e => this.handleChange(e.target)}
               name='playType'
               placeholder='Play Type'
+              value={this.state.playType}
               list='play-type'>
               <option>Play Type</option>
               <option value='run'>Run</option>
               <option value='pass'>Pass</option>
               <option value='sack'>Sack</option>
-              <option value='incompletePass'>Incomplete Pass</option>
+              <option value='incomplete pass'>Incomplete Pass</option>
               <option value='kick'>Kick</option>
             </select>
-            <select onChange={e => this.handleChange(e.target)} name='gainLoss'>
-              <option>Gain/Loss</option>
-              <option value='gain'>Gain</option>
-              <option value='loss'>Loss</option>
-            </select>
-            <input
-              onChange={e => this.handleChange(e.target)}
-              name='playDist'
-              placeholder='Play Distance'
-              list='play-distance'
-            />
-            <datalist id='play-distance'>
-              {[...Array(100)].map((el, i) => (
-                <option value={i} key={i}>
-                  Yards
-                </option>
-              ))}
-            </datalist>
-            <input
-              onChange={e => this.handleChange(e.target)}
-              name='player1'
-              placeholder={this.state.playType === 'pass' ? 'Passer' : 'Runner'}
-              list='player1'
-            />
-            <datalist id='player1'>
-              {this.state.team === 'home'
-                ? this.state.home.map(player => (
-                  <option value={player.last_name}>{player.position}</option>
-                ))
-                : this.state.away.map(player => (
-                  <option value={player.last_name}>{player.position}</option>
-                ))}
-            </datalist>
-            {this.state.playType === 'pass' && (
-              <>
-                <input
-                  onChange={e => this.handleChange(e.target)}
-                  name='player2'
-                  placeholder='Receiver'
-                  list='player2'
-                />
-                <datalist id='player2'>
-                  {this.state.team === 'home'
-                    ? this.state.home.map((player, i) => (
-                      <option key={i} value={player.last_name}>
-                        {player.position}
-                      </option>
-                    ))
-                    : this.state.away.map((player, i) => (
-                      <option key={i} value={player.last_name}>
-                        {player.position}
-                      </option>
-                    ))}
-                </datalist>
-              </>
+
+            {this.state.playType && (
+              <PlayInputs
+                handleChange={this.handleChange}
+                adminState={this.state}
+                addScore={this.addScore}
+              />
             )}
-            <select onChange={e => this.handleChange(e.target)} name='result'>
-              <option value='1st'>1st Down</option>
-              <option value='2nd'>2nd Down</option>
-              <option value='3rd'>3rd Down</option>
-              <option value='4th'>4th Down</option>
-              <option value='punt'>Punt</option>
-              <option value='downs'>Turnover On Downs</option>
-              <option value='fumble'>Fumble</option>
-              <option value='interception'>Interception</option>
-              <option value='safety'>Safety</option>
-              <option value='touchdown'>Touchdown</option>
-              <option value='fieldGoal'>Field Goal</option>
-              <option value='missedFG'>Field Goal (Missed) </option>
-              <option value='endHalf'>End Of Half</option>
-              <option value='endGame'>End Of Game</option>
-            </select>
-            <input
-              placeholder='Minutes'
-              onChange={e => this.handleChange(e.target)}
-              name='min'
-              list='min'
-            />
-            <datalist id='min'>
-              {[...Array(15)].map((el, i) => (
-                <option key={i} value={i}>
-                  Minutes
-                </option>
-              ))}
-            </datalist>
-            <input
-              placeholder='Seconds'
-              onChange={e => this.handleChange(e.target)}
-              name='sec'
-              list='sec'
-            />
-            <datalist id='sec'>
-              {[...Array(60)].map((el, i) => (
-                <option key={i} value={i}>
-                  Seconds
-                </option>
-              ))}
-            </datalist>
-            <select name='quarter' onChange={e => this.handleChange(e.target)}>
-              <option>Select Quarter</option>
-              <option value='1st'>1st</option>
-              <option value='2nd'>2nd</option>
-              <option value='3rd'>3rd</option>
-              <option value='4th'>4th</option>
-            </select>
-            <button onClick={() => this.submitPlay()} >Submit</button>
           </div>
-        )} */}
-        
-        
-        {/* After TD play inputs
-        {this.state.showAfterTD && (
-          <div>
-            <select onChange={e => this.handleChange(e.target)} name='afterTD'>
-              <option>PAT/2Pt</option>
-              <option value='pat'>PAT Attempt</option>
-              <option value='2pt'>2-Pt Conversion</option>
-            </select>
-            {this.state.afterTD === 'pat' ? (
-              <>
-                <input
-                  onChange={e => this.handleChange(e.target)}
-                  name='kicker'
-                  placeholder='Kicker'
-                  list='kicker'
-                />
-                <datalist id='kicker'>
-                  {this.state.team === 'home'
-                    ? this.state.home.map((player, i) => (
-                      <option key={i} value={player.last_name}>
-                        {player.position}
-                      </option>
-                    ))
-                    : this.state.away.map((player, i) => (
-                      <option key={i} value={player.last_name}>
-                        {player.position}
-                      </option>
-                    ))}
-                </datalist>
-                <select
-                  onChange={e => this.handleChange(e.target)}
-                  name='patRes'>
-                  <option>PAT Result</option>
-                  <option value='good'>Good</option>
-                  <option value='missed'>Missed</option>
-                  <option value='blocked'>Blocked</option>
-                </select>
-                {this.state.patRes === 'blocked' && (
-                  <>
-                    <input
-                      onChange={e => this.handleChange(e.target)}
-                      name='patBlocker'
-                      placeholder='Blocked By'
-                      list='patBlocker'
-                    />
-                    <datalist id='patBlocker'>
-                      {this.state.team === 'away'
-                        ? this.state.home.map((player, i) => (
-                          <option key={i} value={player.last_name}>
-                            {player.position}
-                          </option>
-                        ))
-                        : this.state.away.map((player, i) => (
-                          <option key={i} value={player.last_name}>
-                            {player.position}
-                          </option>
-                        ))}
-                    </datalist>
-                    <button>Submit</button>
-                  </>
-                )}
-              </>
-            ) : (
-                // 2 point conversion play section
-                this.state.afterTD === '2pt' && (
-                  <div className='2pt-play'>
-                    <select
-                      onChange={e => this.handleChange(e.target)}
-                      name='playType'
-                      placeholder='Play Type'
-                      list='play-type'>
-                      <option>Play Type</option>
-                      <option value='run'>Run</option>
-                      <option value='pass'>Pass</option>
-                      <option value='sack'>Sack</option>
-                      <option value='incompletePass'>Incomplete Pass</option>
-                      <option value='kick'>Kick</option>
-                    </select>
-                    <input
-                      onChange={e => this.handleChange(e.target)}
-                      name='player1'
-                      placeholder={
-                        this.state.playType === 'pass' ? 'Passer' : 'Runner'
-                      }
-                      list='player1'
-                    />
-                    <datalist id='player1'>
-                      {this.state.team === 'home'
-                        ? this.state.home.map((player, i) => (
-                          <option key={i} value={player.last_name}>
-                            {player.position}
-                          </option>
-                        ))
-                        : this.state.away.map((player, i) => (
-                          <option key={i} value={player.last_name}>
-                            {player.position}
-                          </option>
-                        ))}
-                    </datalist>
-                    {this.state.playType === 'pass' && (
-                      <>
-                        <input
-                          onChange={e => this.handleChange(e.target)}
-                          name='player2'
-                          placeholder='Receiver'
-                          list='player2'
-                        />
-                        <datalist id='player2'>
-                          {this.state.team === 'home'
-                            ? this.state.home.map((player, i) => (
-                              <option key={i} value={player.last_name}>
-                                {player.position}
-                              </option>
-                            ))
-                            : this.state.away.map((player, i) => (
-                              <option key={i} value={player.last_name}>
-                                {player.position}
-                              </option>
-                            ))}
-                        </datalist>
-                      </>
-                    )}
-                    <select>
-                      <option>2pt Result</option>
-                      <option value='good'>Good</option>
-                      <option value='failed'>Failed</option>
-                    </select>
-                    <button>Submit</button>
-                  </div>
-                )
-              )}
-          </div>
-        )} */}
-
-
-<AfterTDInputs admin={this.state} handleChange={this.handleChange}/>
-
-
-{this.state.showAddPlay && (
-
-
-<div>
-
-  <select
-    onChange={e => this.handleChange(e.target)}
-    name='playType'
-    placeholder='Play Type'
-    value={this.state.playType}
-    list='play-type'>
-    <option>Play Type</option>
-    <option value='run'>Run</option>
-    <option value='pass'>Pass</option>
-    <option value='sack'>Sack</option>
-    <option value='incomplete pass'>Incomplete Pass</option>
-    <option value='kick'>Kick</option>
-  </select>
-
-
-
-
-  {this.state.playType &&
-
-    <PlayInputs
-      handleChange={this.handleChange}
-      adminState={this.state}
-      submitPlay={this.submitPlay}
-    />}
-
-
-</div>)
-}
+        )}
       </Wrapper>
     )
   }

@@ -56,12 +56,12 @@ export default class Field extends React.Component {
         <div className='fieldDiv'>
           <img className='goal-post-left' src={goal} alt='' height='100' />
 
-          <LeftZone color={this.props.game.hColor}>
-            <Home>{this.props.game.hSchool}</Home>
+          <LeftZone color={this.props.game.home.color}>
+            <Home>{this.props.game.home.school}</Home>
           </LeftZone>
           <div className='trapezoid'></div>
-          <RightZone color={this.props.game.aColor}>
-            <Away>{this.props.game.aSchool}</Away>
+          <RightZone color={this.props.game.away.color}>
+            <Away>{this.props.game.away.school}</Away>
           </RightZone>
           {/* <h3 className="team-1">Bears</h3> */}
           {/* <h3 className="team-2">Tigers</h3> */}

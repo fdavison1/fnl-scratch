@@ -38,79 +38,84 @@ span {
     margin-right: 50px;
 }`
 
+
 export default class GameLeaders extends React.Component{
     state={
 
     }
     render(){
-        // console.log(this.props.game.hColor)
-        return(
-           
-            <Wrapper>
-
-
-                <div className="section">
-                <Jersey color={this.props.game.hColor} number='21'/>
-                <div className="stats">
-                    <h1>Passing Leaders</h1>
-                    <div className="box">
-                        <div className="left">
-                            <p>Name</p>
-                            <p>Yards</p>
-                            <p>School #</p>
-                        </div>
-                        <div className="right">
-                            <p>Name</p>
-                            <p>Yards</p>
-                            <p>School #</p>
-                        </div>
-                    </div>
-
+        return (
+          <Wrapper>
+            <div className='section'>
+              <Jersey color={this.props.game.home.color} number='21' />
+              <div className='stats'>
+                <h1>Passing Leaders</h1>
+                <div className='box'>
+                  <div className='left'>
+                    <p>Name</p>
+                    <p>Yards</p>
+                    <p>School #</p>
+                  </div>
+                  <div className='right'>
+                    <p>Name</p>
+                    <p>Yards</p>
+                    <p>School #</p>
+                  </div>
                 </div>
-                <Jersey color={this.props.game.aColor} number='17' flip={true}/></div>
-                
-                <div className="section">
-                <Jersey color={this.props.game.hColor} number='21'/>
-                <div className="stats">
-                    <h1>Rushing Leaders</h1>
-                    <div className="box">
-                        <div className="left">
-                            <p><span>Gater</span></p>
-                            <p>999 Yards</p>
-                            <p>LHS #7</p>
-                        </div>
-                        <div className="right">
-                            <p>Name</p>
-                            <p>Yards</p>
-                            <p>School #</p>
-                        </div>
-                    </div>
+              </div>
+              <Jersey color={this.props.game.away.color} number='17' flip={true} />
+            </div>
 
+            <div className='section'>
+              <Jersey color={this.props.game.home.color} number='21' />
+              <div className='stats'>
+                <h1>Rushing Leaders</h1>
+                <div className='box'>
+                  <div className='left'>
+                    <p>
+                      <span>Gater</span>
+                    </p>
+                    <p>999 Yards</p>
+                    <p>LHS #7</p>
+                  </div>
+                  <div className='right'>
+                    <p>Name</p>
+                    <p>Yards</p>
+                    <p>School #</p>
+                  </div>
                 </div>
-                <Jersey color={this.props.game.aColor} number='17' flip={true}/>
-                </div>
+              </div>
+              <Jersey
+                color={this.props.game.away.color}
+                number='17'
+                flip={true}
+              />
+            </div>
 
-                <div className="section">
-                <Jersey color={this.props.game.hColor} number='21'/>
-                <div className="stats">
-                    <h1>Receiving Leaders</h1>
-                    <div className="box">
-                        <div className="left">
-                            <p>Name</p>
-                            <p>Yards</p>
-                            <p>School #</p>
-                        </div>
-                        <div className="right">
-                            <p>Name</p>
-                            <p>Yards</p>
-                            <p>School #</p>
-                        </div>
-                    </div>
+            <div className='section'>
+              <Jersey color={this.props.game.home.color} number='21' />
+              <div className='stats'>
+                <h1>Receiving Leaders</h1>
+                <div className='box'>
+                  <div className='left'>
+                    <p>Name</p>
+                    <p>Yards</p>
+                    <p>School #</p>
+                  </div>
+                  <div className='right'>
+                    <p>Name</p>
+                    <p>Yards</p>
+                    <p>School #</p>
+                  </div>
                 </div>
-                <Jersey color={this.props.game.aColor} number='17' flip={true}/>
-                </div>
-            </Wrapper>
-                 
+              </div>
+              <Jersey
+                color={this.props.game.away.color}
+                number='17'
+                flip={true}
+              />
+            </div>
+          </Wrapper>
         )
     }
 } 

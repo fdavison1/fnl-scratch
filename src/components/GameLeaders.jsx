@@ -38,6 +38,7 @@ span {
     margin-right: 50px;
 }`
 
+
 export default class GameLeaders extends React.Component{
     state={
 

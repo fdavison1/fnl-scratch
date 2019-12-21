@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
 `
 
 const Home = styled.p`
@@ -64,14 +65,14 @@ export default class Field extends React.Component {
           </RightZone>
           {/* <h3 className="team-1">Bears</h3> */}
           {/* <h3 className="team-2">Tigers</h3> */}
+
+          <img className='goal-post-right' src={goal} alt='' height='100' />
+        </div>
           {/* <div id="horizontal-list">
             <h4>10</h4>
             <h4>50</h4>
             <h4>10</h4>
           </div> */}
-
-          <img className='goal-post-right' src={goal} alt='' height='100' />
-        </div>
       </Wrapper>
     )
   }

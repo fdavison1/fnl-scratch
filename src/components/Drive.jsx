@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import Play from './Play'
 
 const Wrapper = styled.div`
+h1 {
+  color: ${'#999999'};
+  &:hover {
+    color: black;
+  }
+}
 .drives {
     font-size: 1.25rem;
     font-weight: bold;

@@ -34,6 +34,9 @@ background: lightgray;
   font-family: Digital-7;
   font-size: 3rem;
   justify-content: center;
+  /* border: 1px solid black; */
+  background: white;
+  border-radius: 5px;
 }
 .clockContainer {
   display: flex;
@@ -51,11 +54,11 @@ background: lightgray;
 }
 .box-score {
   display: flex;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
   padding: 3px 5px;
   margin-bottom: 3px;
-  background: white;
+  /* background: white; */
 }
 .quarter {
   display: flex;
@@ -72,6 +75,8 @@ span {
 
 export default class Scoreboard extends React.Component {
   state = {
+    min: '15',
+    sec: '00',
     hScore: 0,
     aScore: 0,
     hs1: 0,
@@ -144,7 +149,6 @@ export default class Scoreboard extends React.Component {
   }
 
   render() {
-
     const {
       away,
       home

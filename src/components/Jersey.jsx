@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
 
+
+const Jersey = props => {
+
 const JerseyStyle = styled.svg`
-	height: 200px;
-	width: 200px;
-}
+	/* border: solid black; */
+	height: 115px;
+	${props.flip && 'transform: scaleX(-1);'}
   .st0 {
     fill: #010101;
   }
@@ -26,7 +29,6 @@ const JerseyStyle = styled.svg`
     stroke: #010101;
   }
   .st5 {
-    /* display: none */
     fill: #ffffff;
   }
   .st6 {
@@ -36,7 +38,7 @@ const JerseyStyle = styled.svg`
     stroke-linejoin: round;
   }
   .st7 {
-    fill: {props.color};
+    fill: ${props.color};
   }
   .st8 {
     fill: #5d0626;
@@ -314,11 +316,10 @@ const JerseyStyle = styled.svg`
   .st63 {
     opacity: 0.1726;
     fill: #010101;
-    enable-background: new;
-  }
-`
-function Jersey(props) {
-  
+    /* enable-background: new; */
+	}
+	`
+    
   return (
     <div className='App'>
       <JerseyStyle version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -341,7 +342,7 @@ function Jersey(props) {
 		c3.3,9.6,6.4,18.6,11,32c3.5,22.1,6.9,44.3,6.5,70.5c-4.1-4.5-9.6-33.6-11-39.5c-0.7-24.4-7.5-35-13-56L360.7,688.9z"/>
 	<path id="path68938" sodipodinodetypes="cccccccccccc" inkscapeconnector-curvature="0" className="st13" d="M128.1,685.5
 		c-2.5,13.7-8.1,22.3-11,32.9c-2.7,21.3-5.5,42.5-6.9,70.3l-2.6,64.8L127,877l12.3,5.9v-8c-1.5-14.3-1.1-29,4.4-43.3
-		c6.8-15.6,12.2-33.6,15-56.5c6.4-8.6,15.4-14.8,14.5-56c-0.9-14.1,2.6-21.4,8.4-25.3L128.1,685.5z"/> guy*/}
+		c6.8-15.6,12.2-33.6,15-56.5c6.4-8.6,15.4-14.8,14.5-56c-0.9-14.1,2.6-21.4,8.4-25.3L128.1,685.5z"/> 
 	 <path id="path68950" sodipodinodetypes="cccccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st2" d="M55,939.2
 		c1,5,1.8,10.4,8,10.3l3.1,5l8.5,0.3c1.5-2,2.7-4.2,6.4-5l0.4,5.4l5-0.1l0.3-5.3c3.6,0.6,3.4,3.1,3.6,5.4l4.5,0.1
 		c0.7-3.6,0.4-7.2,4.6-10.6l0.9,5.9c8.6-3.9,8.1-12.1,10.3-19.1l10-11.1l-3.1,5.5l8.4,0.3l1.8,6.1h3.3l2.5-6.8l1.5,0.4v1.4l3.5-0.5
@@ -353,7 +354,7 @@ function Jersey(props) {
 		c-0.1-3.6,6.8-15.3-9.5-23.4c-8.2-2.4-14.4-2.4-18.3,0.5c-3.3,3.8-3.5,10.6-3.1,18C95.5,892.3,84.6,902.4,73.3,912z"/>
 	<path id="path68940" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st4" d="M110.3,788.4
 		c13.1,12.1,29.2,8.7,45.6,4.1l2.8-17.8c17.9-17.8,14.2-50.2,14-58.8c0.4-12.5,3.6-19.4,8.6-22.3l-53.5-8.6
-		c-1.6,14.1-10.7,26.7-11.6,39.3C113.4,745.9,111.8,767.2,110.3,788.4z"/>guy */}
+		c-1.6,14.1-10.7,26.7-11.6,39.3C113.4,745.9,111.8,767.2,110.3,788.4z"/>
 	 <path id="path69021" sodipodinodetypes="cccccc" inkscapeconnector-curvature="0" className="st14" d="M128.2,686.9
 		c-3.3,9.6-6.4,18.6-11,32c-3.5,22.1-6.9,44.3-6.5,70.5c4.1-4.5,9.6-33.6,11-39.5c0.7-24.4,7.5-35,13-56L128.2,686.9z"/>
 	<path id="path66994" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st0" d="M380.7,244.4l-8.4,0.3
@@ -369,12 +370,12 @@ function Jersey(props) {
 		c0.3-11.1,9.6-15.5,10.9-29.1c10.1-17.4,23.5-31.2,26-57.3c-0.2-8.3,4.2-13.9,4.9-21.3c0.7-7.5,1.2-9.9,1.7-14
 		c13.9-22.7,26.7-45.8,31.1-71.3L113.8,286.6z"/>
 	<path id="path67014" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st3" d="M118,243.6l2.7,2.5l-3.4,36.4
-		l-3.5,4.6c6.4,15,26,15.1,45.7,15.1l4.9-24.7c13-28.2-4.7-41.9-31.5-51.4L118,243.6z"/> guy*/}
+		l-3.5,4.6c6.4,15,26,15.1,45.7,15.1l4.9-24.7c13-28.2-4.7-41.9-31.5-51.4L118,243.6z"/> 
 	 <path sodipodinodetypes="ccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M166,399.2l70.5,18
 		c21.3,1.2,50.7-4.9,88-17.8c-2.5-47.4,3.9-57.9,3-86.5c0-10.2,0-21.2,0-32c11.8-20,24-47.9,41-49c10.8,4.3,9.7,8.5,11,12.8
 		c6.1-0.1,9.6-3.3,11.8-8c-1-13,4.4-49.8-8.5-56.3c-15.8-10.2-41.7-19.4-70-25.3l-18.5-6.5c7.1,19.3-27.9,34.1-49.5,43
 		c-14-7.8-60-22.9-47.5-44l-20.3,7.8c-27.9,4.8-51.9,11.1-69,24.8c-9.2,10.7-9.4,21.1-8.8,56.8c1.2,4.4,5.9,6.5,11,8.3
-		c-1.3-6.5,9.5-18.5,19.3-10.3c9.4,3.5,21.3,22.7,34,46c-1.1,18.9-2.3,42.5,3.5,71.5C166.6,365,166.3,382.8,166,399.2z"/>guy */}
+		c-1.3-6.5,9.5-18.5,19.3-10.3c9.4,3.5,21.3,22.7,34,46c-1.1,18.9-2.3,42.5,3.5,71.5C166.6,365,166.3,382.8,166,399.2z"/>
 	 <path className="st0" d="M241.6,417.8c-1.8,0-3.5,0-5.2-0.1l-71-18.1l0.2-11.2c0.3-12.8,0.5-26,0.8-35.9c-6-30-4.5-54.9-3.5-71.4
 		c-11.2-20.6-23.9-42-33.7-45.6l-0.1-0.1c-5-4.2-9.7-2.5-12-1.1c-4.2,2.5-7.1,7.4-6.4,10.9l0.2,0.9l-0.8-0.3
 		c-5.1-1.8-10.1-3.9-11.3-8.6v-0.1c-0.7-35.5-0.5-46.2,8.9-57.1c18.2-14.8,44-20.8,69.2-25.1l21.5-8.2l-0.7,1.2
@@ -474,7 +475,7 @@ function Jersey(props) {
 		c-0.3,0.7-1.3,3.4-2,3.5c-1.6,0.3-4.7-1.5-4.7-1.5l8.6-38.8c0.6-5.6,1.1-11.1-1.8-16.7h-52.1h-3.1h-52.1
 		c-2.9,5.6-2.4,11.1-1.8,16.7l8.4,38.7c0,0-3.1,1.9-4.7,1.5c-0.8-0.2-1.8-2.8-2-3.5c-0.8-2.3,1.3-3-0.5-10.8
 		c-1.5-6.8-3.9-16.9-3.6-25.7l-1.8-19c-1.9-20.3,4.8-48.5,34.2-61c0,0,1.3-1.7,2.9-2.4c5-1.9,15.2-3.4,22.4-3.6
-		C252.7,13.8,262.9,15.5,268.1,17.5z"/> guy*/}
+		C252.7,13.8,262.9,15.5,268.1,17.5z"/> 
 	
 		 <path sodipodinodetypes="cccccssccccccccccccccccsccccccscccccccccccccccscccccccccccsccccccccccccccccccccccccccscccccccccccccccccccccccccccccsccccscccscccsccccccccccccccccccccccccccccccccccccsccscccsccccccccccccccccccccccccccccsccsc" inkscapeconnector-curvature="0" className="st11" d="
 		M247.6,71.9c6.1,0,17,0.3,27.6,1.1l0.4-0.4c0.4-0.4,0.9-0.6,1.4-0.7c0.8,0,1.6,0.6,1.9,1.4c5.5,0.5,10.7,1,15,1.8

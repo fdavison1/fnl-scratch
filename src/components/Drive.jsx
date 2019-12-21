@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 
 export default class Drive extends React.Component{
     state={
-        showPlays: false,
     }
 
 showPlays(){
@@ -24,15 +23,14 @@ showPlays(){
 }
 
     render(){
-      console.log(this.props)
       
         const { drive } = this.props
         return (
           <Wrapper>
-            <h1 onClick={() => this.showPlays()} className='drives'>
+            <h1 onClick={() => this.props.setCurrentDrive(drive.driveCount)} className='drives'>
               Drive {drive.driveCount}: {this.props.teamObj.school} {this.props.teamObj.mascot}
             </h1>
-            {this.state.showPlays && (
+            {(this.props.selectedDrive === drive.driveCount) && (
               <div className='plays'>
                 {drive.plays.map(play => (
                   <Play key={play.index} play={play} />

@@ -7,21 +7,21 @@ border: 1px solid black;
 border-radius: 7px;
 margin-left: 25px;
 height: 400px;
-width: 475px;`
+width: 475px;
+overflow: scroll;`
 
 export default class Drives extends React.Component{
     state={
 
     }
     render(){
-        console.log(this.props)
         
         const { drivesArr } = this.props.game
         return(
             <Wrapper>
                 {drivesArr.length === 0 ? 'No drives yet' :
                 <div className='drives'>   
-                    {drivesArr.map(drive => <Drive teamObj={this.props.game[drive.team]} key={drive.driveCount} drive={drive}/>)}
+                    {drivesArr.map(drive => <Drive selectedDrive={this.props.selectedDrive} setCurrentDrive={this.props.setCurrentDrive} teamObj={this.props.game[drive.team]} key={drive.driveCount} drive={drive}/>)}
                 </div>}
             </Wrapper>
         )

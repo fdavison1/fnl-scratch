@@ -7,7 +7,7 @@ const DriveModel = new Schema({
   team: { type: String, required: true },
   fieldSide: { type: String, required: true },
   yardLine: { type: Number, required: true },
-  plays: [PlaySchema]
+  plays: [Object]
 })
 
 module.exports = mongoose.model('drive', DriveModel)

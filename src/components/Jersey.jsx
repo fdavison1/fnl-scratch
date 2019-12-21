@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 
 const JerseyStyle = styled.svg`
-	height: 200px
-	width: 200px
+	height: 200px;
+	width: 200px;
 }
   .st0 {
     fill: #010101;
@@ -324,53 +324,53 @@ function Jersey(props) {
       <JerseyStyle version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1060 1052.4" style={{enableBackground:'new 0 0 1060 1052.4'}} xmlSpace="preserve" fill={props.color}>
 <style type="text/css"></style>
-<g id="layer1" inkscapeLabel="Layer_1" inkscapeGroupmode="layer">
-	<path id="path66974" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st0" d="M109.2,244.4l8.4,0.3
+<g id="layer1" inkscapelabel="Layer_1" inkscapegroupmode="layer">
+	<path id="path66974" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st0" d="M109.2,244.4l8.4,0.3
 		c4.3-6.3,9.4-10.2,16-9.3l-13.4-7C109.7,231,111.1,238.4,109.2,244.4z"/>
-	<path id="path68964" sodipodiNodetypes="cccccccccccccccccccccccc" inkscapeConnector-curvature="0" className="st2" d="M433.3,938.7
+	<path id="path68964" sodipodinodetypes="cccccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st2" d="M433.3,938.7
 		c-1,5-1.8,10.4-8,10.3l-3.1,5l-8.5,0.3c-1.5-2-2.7-4.2-6.4-5l-0.4,5.4l-5-0.1l-0.3-5.3c-3.6,0.6-3.4,3.1-3.6,5.4l-4.5,0.1
 		c-0.7-3.6-0.4-7.2-4.6-10.6l-0.9,5.9c-8.6-3.9-8.1-12.1-10.3-19.1l-10-11.1l3.1,5.5l-8.4,0.3l-1.8,6.1h-3.3l-2.5-6.8l-1.5,0.4v1.4
 		l-3.5-0.5c-1.6-4.2-1.9-8.4-2.5-12.6L433.3,938.7z"/>
-	<path id="path68952" sodipodiNodetypes="cccccccccccc" inkscapeConnector-curvature="0" className="st13" d="M360.2,685
+	<path id="path68952" sodipodinodetypes="cccccccccccc" inkscapeconnector-curvature="0" className="st13" d="M360.2,685
 		c2.5,13.7,8.1,22.3,11,32.9c2.7,21.3,5.5,42.5,6.9,70.3l2.6,64.7l-19.4,23.5l-12.3,5.9v-8c1.5-14.3,1.1-29-4.4-43.3
 		c-6.8-15.6-12.2-33.6-15-56.5c-6.4-8.6-15.4-14.8-14.5-56c0.9-14.1-2.6-21.4-8.4-25.3L360.2,685z"/>
-	<path id="path68954" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st4" d="M378,787.9
+	<path id="path68954" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st4" d="M378,787.9
 		c-13.1,12.1-29.2,8.7-45.6,4.1l-2.8-17.8c-17.9-17.8-14.2-50.2-14-58.8c-0.4-12.5-3.6-19.4-8.6-22.3l53.5-8.6
 		c1.6,14.1,10.7,26.7,11.6,39.3C374.9,745.4,376.4,766.7,378,787.9z"/>
-	<path id="path69023" sodipodiNodetypes="cccccc" inkscapeConnector-curvature="0" className="st14" d="M360.7,688.9
+	<path id="path69023" sodipodinodetypes="cccccc" inkscapeconnector-curvature="0" className="st14" d="M360.7,688.9
 		c3.3,9.6,6.4,18.6,11,32c3.5,22.1,6.9,44.3,6.5,70.5c-4.1-4.5-9.6-33.6-11-39.5c-0.7-24.4-7.5-35-13-56L360.7,688.9z"/>
-	<path id="path68938" sodipodiNodetypes="cccccccccccc" inkscapeConnector-curvature="0" className="st13" d="M128.1,685.5
+	<path id="path68938" sodipodinodetypes="cccccccccccc" inkscapeconnector-curvature="0" className="st13" d="M128.1,685.5
 		c-2.5,13.7-8.1,22.3-11,32.9c-2.7,21.3-5.5,42.5-6.9,70.3l-2.6,64.8L127,877l12.3,5.9v-8c-1.5-14.3-1.1-29,4.4-43.3
 		c6.8-15.6,12.2-33.6,15-56.5c6.4-8.6,15.4-14.8,14.5-56c-0.9-14.1,2.6-21.4,8.4-25.3L128.1,685.5z"/> guy*/}
-	 <path id="path68950" sodipodiNodetypes="cccccccccccccccccccccccc" inkscapeConnector-curvature="0" className="st2" d="M55,939.2
+	 <path id="path68950" sodipodinodetypes="cccccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st2" d="M55,939.2
 		c1,5,1.8,10.4,8,10.3l3.1,5l8.5,0.3c1.5-2,2.7-4.2,6.4-5l0.4,5.4l5-0.1l0.3-5.3c3.6,0.6,3.4,3.1,3.6,5.4l4.5,0.1
 		c0.7-3.6,0.4-7.2,4.6-10.6l0.9,5.9c8.6-3.9,8.1-12.1,10.3-19.1l10-11.1l-3.1,5.5l8.4,0.3l1.8,6.1h3.3l2.5-6.8l1.5,0.4v1.4l3.5-0.5
 		c1.6-4.2,1.9-8.4,2.5-12.6L55,939.2z"/>
-	<path id="path68944" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st15" d="M96,875.2
+	<path id="path68944" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st15" d="M96,875.2
 		c-5.8,17.8-18.8,34.4-36.4,50.4c-9.8,8.3-8.7,24,17.4,20.5c11.8-0.6,23.4-2.3,33.5-11.8c10.4-19.1,25.8-11.7,30.6-20.6
 		c1.7-11.6,1.1-23.8,0.5-36l-3.9-4.6L96,875.2z"/>
-	<path id="path68942" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st3" d="M73.3,912l17.8,5.9l36.1-39.5
+	<path id="path68942" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st3" d="M73.3,912l17.8,5.9l36.1-39.5
 		c-0.1-3.6,6.8-15.3-9.5-23.4c-8.2-2.4-14.4-2.4-18.3,0.5c-3.3,3.8-3.5,10.6-3.1,18C95.5,892.3,84.6,902.4,73.3,912z"/>
-	<path id="path68940" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st4" d="M110.3,788.4
+	<path id="path68940" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st4" d="M110.3,788.4
 		c13.1,12.1,29.2,8.7,45.6,4.1l2.8-17.8c17.9-17.8,14.2-50.2,14-58.8c0.4-12.5,3.6-19.4,8.6-22.3l-53.5-8.6
 		c-1.6,14.1-10.7,26.7-11.6,39.3C113.4,745.9,111.8,767.2,110.3,788.4z"/>guy */}
-	 <path id="path69021" sodipodiNodetypes="cccccc" inkscapeConnector-curvature="0" className="st14" d="M128.2,686.9
+	 <path id="path69021" sodipodinodetypes="cccccc" inkscapeconnector-curvature="0" className="st14" d="M128.2,686.9
 		c-3.3,9.6-6.4,18.6-11,32c-3.5,22.1-6.9,44.3-6.5,70.5c4.1-4.5,9.6-33.6,11-39.5c0.7-24.4,7.5-35,13-56L128.2,686.9z"/>
-	<path id="path66994" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st0" d="M380.7,244.4l-8.4,0.3
+	<path id="path66994" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st0" d="M380.7,244.4l-8.4,0.3
 		c-4.3-6.3-9.4-10.2-16-9.3l13.4-7C380.2,231,378.8,238.4,380.7,244.4z"/>
-	<path id="path67034" sodipodiNodetypes="cccccccccccc" inkscapeConnector-curvature="0" className="st4" d="M377.5,287.1
+	<path id="path67034" sodipodinodetypes="cccccccccccc" inkscapeconnector-curvature="0" className="st4" d="M377.5,287.1
 		c9.7,20,26.7,43.9,25.8,67.9c8.6,11.9,15,24.9,16.6,40.3c8.4,13.6,16.4,43.3,14.3,91.2l2.9,17.2c-9.2-8.9-19.3-12.2-30.4-8.4
 		c-0.3-11.1-9.6-15.5-10.9-29.1c-10.1-17.4-23.5-31.2-26-57.3c0.2-8.3-4.2-13.9-4.9-21.3c-0.7-7.5-1.2-9.9-1.7-14
 		c-13.9-22.7-26.7-45.8-31.1-71.3L377.5,287.1z"/>
-	<path id="path67018" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st3" d="M372.9,243.8l-2.7,2.5
+	<path id="path67018" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st3" d="M372.9,243.8l-2.7,2.5
 		l3.4,36.4l3.5,4.6c-6.4,15-26,15.1-45.7,15.1l-4.9-24.7c-13-28.2,4.7-41.9,31.5-51.4L372.9,243.8z"/>
-	<path id="path67022" sodipodiNodetypes="cccccccccccc" inkscapeConnector-curvature="0" className="st4" d="M113.8,286.6
+	<path id="path67022" sodipodinodetypes="cccccccccccc" inkscapeconnector-curvature="0" className="st4" d="M113.8,286.6
 		c-9.7,20-26.7,43.9-25.8,67.9c-8.6,11.9-15,24.9-16.6,40.3C63,408.4,55,438.1,57.1,486l-2.9,17.2c9.2-8.9,19.3-12.2,30.4-8.4
 		c0.3-11.1,9.6-15.5,10.9-29.1c10.1-17.4,23.5-31.2,26-57.3c-0.2-8.3,4.2-13.9,4.9-21.3c0.7-7.5,1.2-9.9,1.7-14
 		c13.9-22.7,26.7-45.8,31.1-71.3L113.8,286.6z"/>
-	<path id="path67014" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st3" d="M118,243.6l2.7,2.5l-3.4,36.4
+	<path id="path67014" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st3" d="M118,243.6l2.7,2.5l-3.4,36.4
 		l-3.5,4.6c6.4,15,26,15.1,45.7,15.1l4.9-24.7c13-28.2-4.7-41.9-31.5-51.4L118,243.6z"/> guy*/}
-	 <path sodipodiNodetypes="ccccccccccccccccccccc" inkscapeConnector-curvature="0" className="st5" d="M166,399.2l70.5,18
+	 <path sodipodinodetypes="ccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M166,399.2l70.5,18
 		c21.3,1.2,50.7-4.9,88-17.8c-2.5-47.4,3.9-57.9,3-86.5c0-10.2,0-21.2,0-32c11.8-20,24-47.9,41-49c10.8,4.3,9.7,8.5,11,12.8
 		c6.1-0.1,9.6-3.3,11.8-8c-1-13,4.4-49.8-8.5-56.3c-15.8-10.2-41.7-19.4-70-25.3l-18.5-6.5c7.1,19.3-27.9,34.1-49.5,43
 		c-14-7.8-60-22.9-47.5-44l-20.3,7.8c-27.9,4.8-51.9,11.1-69,24.8c-9.2,10.7-9.4,21.1-8.8,56.8c1.2,4.4,5.9,6.5,11,8.3
@@ -389,94 +389,94 @@ function Jersey(props) {
 		c-25.1,4.3-50.8,10.3-68.9,24.7c-9,10.5-9.2,21.1-8.6,56.3c1.1,4,5.2,5.9,9.9,7.6c-0.2-3.7,2.8-8.6,7-11.1
 		c2.6-1.5,7.7-3.4,13.1,1.1c10.1,3.8,22.9,25.5,34.2,46.2l0.1,0.1v0.1c-1,16.5-2.5,41.4,3.5,71.4v0.1v0.1c-0.3,9.9-0.5,23.1-0.8,36
 		L166.5,398.8z"/>
-	<path id="path74248" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st16" d="M367.9,228.2l-11.5,2.7
+	<path id="path74248" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st16" d="M367.9,228.2l-11.5,2.7
 		c-15.9,14.2-27.3,30.3-30.5,49.8l0.8,22c-19.7-18.3,3.3-46.6-21.5-63.3c32.9-2.7,39.9-10.7,61.8-33.5
 		C368.7,213.3,370,220.7,367.9,228.2z"/>
-	<path id="path74246" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st16" d="M121.2,227.7l11.5,2.8
+	<path id="path74246" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st16" d="M121.2,227.7l11.5,2.8
 		c15.9,14.2,27.3,30.3,30.5,49.8l-0.8,22c19.7-18.3-3.3-46.6,21.5-63.3c-32.9-2.7-39.9-10.7-61.8-33.5
 		C120.4,212.8,119.1,220.2,121.2,227.7z"/>
-	<path id="path66931" sodipodiNodetypes="ccccccccccc" inkscapeConnector-curvature="0" className="st17" d="M197,147.5l9-12
+	<path id="path66931" sodipodinodetypes="ccccccccccc" inkscapeconnector-curvature="0" className="st17" d="M197,147.5l9-12
 		l-8.1-38.9l8-12.2l82.7-1.4l8.7,17.9l-4.9,39.8l2.3,15c-4.8,14-28.5,20.8-51.6,27.9l-44.7-22.7C192.7,158.2,192.8,153.5,197,147.5
 		L197,147.5z"/>
-	<path id="path68849" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st3" d="M196.5,142.4
+	<path id="path68849" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st3" d="M196.5,142.4
 		c8.6,4.6,18.1,10.5,24.9,12.6c5.4,7,12.5,12.1,23.2,13.1c8-1.5,15.9-4.2,23.9-12.2c11.4,0.2,19.5-5.3,26.7-12.6l-4.2-1.9
 		c-5.4,5.9-12.4,9.3-19.6,12.4l14-15.2l-4.9-4.2c-6.1,12-15.5,19.6-35.9,20c-8.4-0.2-17.4-0.1-22.6-2.7l-12.6-21l-4.1,7.1
 		c6,4.5,7.9,7.7,11.3,11.3l-12.7-7.2C200.9,141.6,198.4,141.7,196.5,142.4z"/>
-	<path id="path66946" sodipodiNodetypes="ccccccccccccccccccccc" inkscapeConnector-curvature="0" className="st18" d="M206.2,113.5
+	<path id="path66946" sodipodinodetypes="ccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st18" d="M206.2,113.5
 		l-5.4-15.9l5.4-11.6l78.9-0.8l4.9,11c-1.2,10.6-4.5,19.9-7.6,29.3l-1.6-7.8c-10.9-2.7-22.5-5-24.4-11.5l-5.8,1.3
 		c4.1-5.6,4.1-13.4,21.1-12.1l0.1-1.9c-5.2-0.8-12.8-1.1-24.6-0.6l-2.4,1.8l0.5,27.8l-8.5,7.1l1.8-6.1l-0.6-13.6l-16.4,2
 		c0.6,7.9,4.9,15.8,1.4,23.8c-4.4-0.2-7.6-16-15.1-23.8L206.2,113.5z"/>
-	<path id="path66948" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st18" d="M236,142.4
+	<path id="path66948" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st18" d="M236,142.4
 		c9.4,2,16.8,1.2,23.9-0.1C259.2,145.6,239.2,149.6,236,142.4z"/>
-	<path id="path66950" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st18" d="M233.3,138
+	<path id="path66950" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st18" d="M233.3,138
 		c11.8-3.3,20.2-2.4,27,0.6L233.3,138z"/>
-	<path id="path67016" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st13" d="M120,284.5
+	<path id="path67016" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st13" d="M120,284.5
 		c7.3,7,18.2,11.8,38.2,10.9"/>
-	<path id="path67020" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st13" d="M332.3,295.2
+	<path id="path67020" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st13" d="M332.3,295.2
 		c18.3,0.1,32.8-2.4,38.4-11"/>
-	<path id="path67024" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st18" d="M102,376.9
+	<path id="path67024" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st18" d="M102,376.9
 		c1.3,13,1.1,26,4.1,39c-14.4,18.8-20.4,39.2-27.7,59.4c5.9-19.8,6.9-39.5,24.4-59.8C99.4,402.6,101.9,389.7,102,376.9L102,376.9z"
 		/>
-	<path id="path67026" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st18" d="M99.8,365
+	<path id="path67026" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st18" d="M99.8,365
 		c10.8,6.7,14.8,15.1,16.7,24.1C112.9,380.9,107.7,372.8,99.8,365z"/>
-	<path id="path67028" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st18" d="M124.9,373.2
+	<path id="path67028" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st18" d="M124.9,373.2
 		c-14.8-3.4-25.1-10.8-22.3-29.9c3.9-14.6,10.3-28.7,15.5-43c-6.1,14.6-15,28.5-17.8,44C99,371,111.8,372.3,124.9,373.2z"/>
-	<path id="path67030" sodipodiNodetypes="ccccccccccccccc" inkscapeConnector-curvature="0" className="st14" d="M54.6,502.6l6.2-4.6
+	<path id="path67030" sodipodinodetypes="ccccccccccccccc" inkscapeconnector-curvature="0" className="st14" d="M54.6,502.6l6.2-4.6
 		l1.9-22.5c-0.1-19.7-0.8-39.4,5.5-58.4c-0.4,13.6,0.6,27.2,3,40.7c1.2-20-2.7-40.4,5.2-59.8c0.2-10.4,3.9-20.5,8.8-30.5l7.5-13.3
 		c1.6-5.9,4.4-7.9,7.2-9.9c3.8-16.2,12.2-30.6,20.1-45.3l-6.9-11.3c-9.4,21.5-24.7,40-25,66.1c-7.8,12-15,24.4-16.8,40.7
 		c-8.7,15.4-16.6,46-14.1,91.2L54.6,502.6z"/>
-	<path id="path67036" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st19" d="M389.2,377.4
+	<path id="path67036" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st19" d="M389.2,377.4
 		c-1.3,13-1.1,26-4.1,39c14.4,18.8,20.4,39.2,27.7,59.4c-5.9-19.8-6.9-39.5-24.4-59.8C391.9,403.1,389.4,390.2,389.2,377.4
 		L389.2,377.4z"/>
-	<path id="path67038" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st19" d="M391.5,365.5
+	<path id="path67038" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st19" d="M391.5,365.5
 		c-10.8,6.7-14.8,15.1-16.7,24.1C378.4,381.4,383.6,373.3,391.5,365.5z"/>
-	<path id="path67040" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st19" d="M366.4,373.7
+	<path id="path67040" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st19" d="M366.4,373.7
 		c14.8-3.4,25.1-10.8,22.3-29.9c-3.9-14.6-10.3-28.7-15.5-43c6.1,14.6,15,28.5,17.8,44C392.3,371.5,379.5,372.8,366.4,373.7
 		L366.4,373.7z"/>
-	<path id="path67042" sodipodiNodetypes="ccccccccccccccc" inkscapeConnector-curvature="0" className="st14" d="M436.7,503.1
+	<path id="path67042" sodipodinodetypes="ccccccccccccccc" inkscapeconnector-curvature="0" className="st14" d="M436.7,503.1
 		l-6.2-4.6l-1.9-22.5c0.1-19.7,0.8-39.4-5.5-58.4c0.4,13.6-0.6,27.2-3,40.7c-1.2-20,2.7-40.4-5.2-59.8c-0.2-10.4-3.9-20.5-8.8-30.5
 		l-7.5-13.3c-1.6-5.9-4.4-7.9-7.2-9.9c-3.8-16.2-12.2-30.6-20.1-45.3l6.9-11.3c9.4,21.5,24.7,40,25,66.1c7.8,12,15,24.4,16.8,40.7
 		c8.7,15.4,16.6,46,14.1,91.2L436.7,503.1z"/>
-	<path id="path6696-4-8-9-4-7-8-5-5" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st20" d="M299,101
+	<path id="path6696-4-8-9-4-7-8-5-5" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st20" d="M299,101
 		l1.1-12.5c0.1-1,0-2-1.1-2.3l-4.1-0.6c-1.4,0-1.7,1-1.9,2.1l-2.2,11L299,101z"/>
-	<path id="path6698-0-4-8-3-1-1-8-1" sodipodiNodetypes="ccccccccc" inkscapeConnector-curvature="0" className="st21" d="
+	<path id="path6698-0-4-8-3-1-1-8-1" sodipodinodetypes="ccccccccc" inkscapeconnector-curvature="0" className="st21" d="
 		M299.4,102.5c0.6-2.2-0.1-3.3-2.6-4l-5.9-1c-2.6-0.3-3.9,0.8-4.4,3.5l-4.8,30.6c-0.2,2.1,0.6,3.5,2.5,4.1l6.8,1.2
 		c2.6-0.1,2.9-1.5,3.4-2.8C296.3,123.4,298.2,113.3,299.4,102.5z"/>
-	<path id="path6700-9-6-1-7-2-5-1-6" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st20" d="M191.5,101
+	<path id="path6700-9-6-1-7-2-5-1-6" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st20" d="M191.5,101
 		l-1.1-12.5c-0.1-1,0-2,1.1-2.3l4.1-0.6c1.4,0,1.7,1,1.9,2.1l2.2,11L191.5,101z"/>
-	<path id="path6702-4-6-1-7-2-8-8-1" sodipodiNodetypes="ccccccccc" inkscapeConnector-curvature="0" className="st21" d="
+	<path id="path6702-4-6-1-7-2-8-8-1" sodipodinodetypes="ccccccccc" inkscapeconnector-curvature="0" className="st21" d="
 		M191.2,102.5c-0.6-2.2,0.1-3.3,2.6-4l5.9-1c2.6-0.3,3.9,0.8,4.4,3.5l4.8,30.7c0.2,2.1-0.6,3.5-2.5,4.1l-6.8,1.2
 		c-2.6-0.1-2.9-1.5-3.4-2.8C194.2,123.4,192.3,113.3,191.2,102.5L191.2,102.5z"/>
 	
-		<path id="path6712-2-7-8-4-6-2-1-3" sodipodiNodetypes="ccccscsccccccccscsccccsc" inkscapeConnector-curvature="0" className="st7" d="
+		<path id="path6712-2-7-8-4-6-2-1-3" sodipodinodetypes="ccccscsccccccccscsccccsc" inkscapeconnector-curvature="0" className="st7" d="
 		M268.1,17.5c1.6,0.7,2.9,2.4,2.9,2.4c29.4,12.6,36.1,40.7,34.2,61l-1.8,19.1c0.3,8.8-2.1,18.9-3.6,25.7c-1.8,7.7,0.3,8.5-0.5,10.8
 		c-0.3,0.7-1.3,3.4-2,3.5c-1.6,0.3-4.7-1.5-4.7-1.5l8.6-38.8c0.6-5.6,1.1-11.1-1.8-16.7h-52.1h-3.1h-52.1
 		c-2.9,5.6-2.4,11.1-1.8,16.7l8.4,38.7c0,0-3.1,1.9-4.7,1.5c-0.8-0.2-1.8-2.8-2-3.5c-0.8-2.3,1.3-3-0.5-10.8
 		c-1.5-6.8-3.9-16.9-3.6-25.7l-1.8-19c-1.9-20.3,4.8-48.5,34.2-61c0,0,1.3-1.7,2.9-2.4c5-1.9,15.2-3.4,22.4-3.6
 		C252.7,13.8,262.9,15.5,268.1,17.5z"/>
-	<path id="path6714-4-3-2-4-3-4-8-5" inkscapeConnector-curvature="0" className="st0" d="M274.7,24.1c1.6,0,5.4,2.3,5.7,4.7
+	<path id="path6714-4-3-2-4-3-4-8-5" inkscapeconnector-curvature="0" className="st0" d="M274.7,24.1c1.6,0,5.4,2.3,5.7,4.7
 		C279,30.2,276.9,27.4,274.7,24.1z M216.1,24.7c-2.3,3.3-4.4,6.1-5.7,4.7C210.7,27,214.5,24.7,216.1,24.7z"/>
-	<path id="path6716-4-1-5-4-2-2-4-0" inkscapeConnector-curvature="0" className="st12" d="M271,21.6c10.3,9.2,11.2,23.2,13.1,35.5
+	<path id="path6716-4-1-5-4-2-2-4-0" inkscapeconnector-curvature="0" className="st12" d="M271,21.6c10.3,9.2,11.2,23.2,13.1,35.5
 		L292,70l6.2,1.6l0.5,2.6l-7.3-1.8l-2.5-3.3l-7.7-11.4C280.1,46,279.4,34.4,271,21.6L271,21.6L271,21.6z M220.6,21.6
 		c-8.4,12.8-9.2,24.4-10.3,36L202.6,69l-2.5,3.3l-7.3,1.8l0.5-2.6l6.2-1.6l7.9-12.9C209.4,44.8,210.4,30.8,220.6,21.6L220.6,21.6z
 		 M302.8,75.5v1.1c-38.4,1.8-76.5,1.6-114.4,0.2v-0.9L302.8,75.5L302.8,75.5z"/>
-	<path id="path6718-5-2-0-1-7-5-5-0" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st22" d="
+	<path id="path6718-5-2-0-1-7-5-5-0" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st22" d="
 		M266.6,61c3.7,0.9,5.1,4.3,5,6.8l-0.2,5.9l0.3,3.5l0.2,6.6c0,2-1.1,3.1-3.8,2.6h-22.2c-0.1-0.1-0.2-0.1-0.3-0.2
 		c-0.1,0.1-0.2,0.1-0.3,0.2h-22.2c-2.7,0.5-3.8-0.6-3.8-2.6l0.2-6.6l0.3-3.5l-0.2-5.9c-0.1-2.5,1.3-6,5-6.8
 		C239.1,58.3,250.6,57.4,266.6,61L266.6,61L266.6,61z"/>
-	<path id="path6720-5-7-1-6-7-8-3-6" inkscapeConnector-curvature="0" className="st0" d="M303.2,98.9c0.1,0,0.2,0.2,0.2,0.3l0,0
+	<path id="path6720-5-7-1-6-7-8-3-6" inkscapeconnector-curvature="0" className="st0" d="M303.2,98.9c0.1,0,0.2,0.2,0.2,0.3l0,0
 		l-9,40.1c0,0.1-0.1,0.2-0.3,0.2c-0.1,0-0.2-0.1-0.2-0.3c0,0,0,0,0-0.1l9-40.1C302.9,99,303,98.9,303.2,98.9L303.2,98.9L303.2,98.9
 		L303.2,98.9z M188.4,98.9c0.1,0,0.2,0.1,0.2,0.2l9,40.1c0,0.1,0,0.3-0.2,0.3c-0.1,0-0.3,0-0.3-0.1c0,0,0,0,0-0.1l-9-40.1
 		c0-0.1,0-0.3,0.2-0.3C188.3,98.9,188.3,98.9,188.4,98.9L188.4,98.9L188.4,98.9L188.4,98.9z"/>
 	
-		<path id="path6712-2-4-1-0-3-7-0-4-5" sodipodiNodetypes="ccccscsccccccccscsccccsc" inkscapeConnector-curvature="0" className="st23" d="
+		<path id="path6712-2-4-1-0-3-7-0-4-5" sodipodinodetypes="ccccscsccccccccscsccccsc" inkscapeconnector-curvature="0" className="st23" d="
 		M268.1,17.5c1.6,0.7,2.9,2.4,2.9,2.4c29.4,12.6,36.1,40.7,34.2,61l-1.8,19.1c0.3,8.8-2.1,18.9-3.6,25.7c-1.8,7.7,0.3,8.5-0.5,10.8
 		c-0.3,0.7-1.3,3.4-2,3.5c-1.6,0.3-4.7-1.5-4.7-1.5l8.6-38.8c0.6-5.6,1.1-11.1-1.8-16.7h-52.1h-3.1h-52.1
 		c-2.9,5.6-2.4,11.1-1.8,16.7l8.4,38.7c0,0-3.1,1.9-4.7,1.5c-0.8-0.2-1.8-2.8-2-3.5c-0.8-2.3,1.3-3-0.5-10.8
 		c-1.5-6.8-3.9-16.9-3.6-25.7l-1.8-19c-1.9-20.3,4.8-48.5,34.2-61c0,0,1.3-1.7,2.9-2.4c5-1.9,15.2-3.4,22.4-3.6
 		C252.7,13.8,262.9,15.5,268.1,17.5z"/> guy*/}
 	
-		 <path sodipodiNodetypes="cccccssccccccccccccccccsccccccscccccccccccccccscccccccccccsccccccccccccccccccccccccccscccccccccccccccccccccccccccccsccccscccscccsccccccccccccccccccccccccccccccccccccsccscccsccccccccccccccccccccccccccccsccsc" inkscapeConnector-curvature="0" className="st11" d="
+		 <path sodipodinodetypes="cccccssccccccccccccccccsccccccscccccccccccccccscccccccccccsccccccccccccccccccccccccccscccccccccccccccccccccccccccccsccccscccscccsccccccccccccccccccccccccccccccccccccsccscccsccccccccccccccccccccccccccccsccsc" inkscapeconnector-curvature="0" className="st11" d="
 		M247.6,71.9c6.1,0,17,0.3,27.6,1.1l0.4-0.4c0.4-0.4,0.9-0.6,1.4-0.7c0.8,0,1.6,0.6,1.9,1.4c5.5,0.5,10.7,1,15,1.8
 		c4.5,0.8,7.9,1.5,10,3.4c0.4,0.3,0.6,0.8,0.7,1.3l3,24.4c0,0.4,0,0.8-0.2,1.1l-2.2,4.6l1.1,1.9c0.5,0.7,0.4,1.8-0.3,2.5l-1.9,2
 		l1.6,2.9c0.4,0.7,0.3,1.6-0.2,2.2c-0.6,0.7-1.2,1.4-1.9,2c0.8,2.8,1.6,5.3,2.2,7.2c1.3,3.9-0.2,7.6-2.5,11.1
@@ -602,7 +602,7 @@ function Jersey(props) {
 		c11.8-0.7,22.9-0.9,27.6-0.9c4.6,0,13.6,0.3,23.9,0.9l1.3,0.1l-4.2,4.1h-0.2c-7.1-0.3-14.4-0.5-21.6-0.5c-7.7,0-15.6,0.2-23.5,0.6
 		H222.9z M221.2,77.2l2.1,2.1c7.9-0.4,15.7-0.6,23.3-0.6c7.1,0,14.3,0.2,21.4,0.5l2-2c-9.7-0.6-18.2-0.8-22.6-0.8l0,0
 		C243,76.4,232.6,76.6,221.2,77.2z"/>
-	<path id="path6753-1-5-06-7-7-2-4-8" inkscapeConnector-curvature="0" className="st0" d="M278.2,74.5l-0.3,2.4L276,77L278.2,74.5
+	<path id="path6753-1-5-06-7-7-2-4-8" inkscapeconnector-curvature="0" className="st0" d="M278.2,74.5l-0.3,2.4L276,77L278.2,74.5
 		L278.2,74.5z M213.1,74.5l2.2,2.5l-1.9-0.1L213.1,74.5L213.1,74.5z M294.8,76.5l1.9,3l-1.6,0.3L294.8,76.5z M274.8,80.2l-3.7,1.8
 		l1.7-1.8H274.8z M218.5,80.2l1.7,1.8l-3.7-1.8H218.5z M292.1,81.1l2.1,1.2l-2.8-0.3L292.1,81.1L292.1,81.1z M198.9,81.3l0.8,0.9
 		l-2.8,0.3L198.9,81.3L198.9,81.3z M288.2,82.7l2.5,2.4l-1.3,0.9L288.2,82.7z M203,82.9l-1.1,3.1l-1.4-0.7L203,82.9L203,82.9z
@@ -635,132 +635,132 @@ function Jersey(props) {
 		c1.6-0.4,3.1-0.8,5-1.5C293.1,128.5,293.2,128.5,293.3,128.5L293.3,128.5z M286.7,153.9l-2.5,1.6l-0.6-0.7L286.7,153.9L286.7,153.9
 		z M204.3,153.9l3.1,0.9l-0.6,0.7L204.3,153.9L204.3,153.9z M268.7,163.7l0.6,2.6l-1.7,0.4L268.7,163.7z M222.2,163.7l1,3l-1.7-0.4
 		L222.2,163.7z"/>
-	<path id="path6726-2-2-7-6-0-6-1-2" sodipodiNodetypes="sccccccccccs" inkscapeConnector-curvature="0" className="st24" d="
+	<path id="path6726-2-2-7-6-0-6-1-2" sodipodinodetypes="sccccccccccs" inkscapeconnector-curvature="0" className="st24" d="
 		M264.4,59.4c2.2,0.1,4.4,1.5,4.9,4.6l1,7.9c0.2,3,0.4,6.1-2.7,7l-5.4-0.1c-2.3-0.2-3-1-3.3-2.6c0.5,0,0.9,0,1.6,0
 		c1.3-1.4,0.8-3.1-0.5-4c-0.7,0-0.9,0-1.4,0L258,65c-0.2-1.1,1.6-3.7,2.8-4.3C261.7,59.7,263.1,59.3,264.4,59.4L264.4,59.4
 		L264.4,59.4z"/> guy*/}
-	 <path id="path6728-7-6-4-4-2-5-5-7" sodipodiNodetypes="csccc" inkscapeConnector-curvature="0" className="st25" d="M259.7,77.8
+	 <path id="path6728-7-6-4-4-2-5-5-7" sodipodinodetypes="csccc" inkscapeconnector-curvature="0" className="st25" d="M259.7,77.8
 		c0.7,0.2,1.6,0.3,2.5-0.6c0.9-1,1-3.1,0.6-4.8l-1.7-8.4c-0.3-1.6,0.1-3.4,1.5-4.3"/>
-	<path id="path6732-1-3-6-4-90-3-2-2" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st24" d="M265.1,68.2
+	<path id="path6732-1-3-6-4-90-3-2-2" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st24" d="M265.1,68.2
 		c2.7-1.6,1.6-5.2-1-5.7"/>
-	<path id="path6734-4-4-5-5-8-9-1-4" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st25" d="M259.9,72.2
+	<path id="path6734-4-4-5-5-8-9-1-4" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st25" d="M259.9,72.2
 		l-1.1-7.6c-0.1-1.1,0.4-2.2,1.1-3.3"/>
-	<path id="path6736-2-2-9-69-5-2-7-5" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st25" d="M258.9,76.1
+	<path id="path6736-2-2-9-69-5-2-7-5" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st25" d="M258.9,76.1
 		c3.6,0.1,5.3,0.2,8.7,0.4c1.5-1.2,1.1-3-0.1-4c-4.4-0.2-2.2-0.3-9.1-0.3"/>
-	<path id="path6738-3-3-5-9-5-4-5-2" sodipodiNodetypes="sccccccccccs" inkscapeConnector-curvature="0" className="st24" d="
+	<path id="path6738-3-3-5-9-5-4-5-2" sodipodinodetypes="sccccccccccs" inkscapeconnector-curvature="0" className="st24" d="
 		M226.5,59.4c-2.2,0.1-4.4,1.5-4.9,4.6l-1,7.9c-0.2,3-0.4,6.1,2.7,7l5.4-0.1c2.3-0.2,3-1,3.3-2.6c-0.5,0-0.9,0-1.6,0
 		c-1.3-1.4-0.8-3.1,0.5-4c0.7,0,0.9,0,1.4,0l0.6-7.2c0.2-1.1-1.6-3.7-2.8-4.3C229.2,59.7,227.9,59.3,226.5,59.4L226.5,59.4z"/>
-	<path id="path6740-8-7-1-7-2-6-4-2" sodipodiNodetypes="csccc" inkscapeConnector-curvature="0" className="st25" d="M231.3,77.8
+	<path id="path6740-8-7-1-7-2-6-4-2" sodipodinodetypes="csccc" inkscapeconnector-curvature="0" className="st25" d="M231.3,77.8
 		c-0.7,0.2-1.6,0.3-2.5-0.6c-0.9-1-1-3.1-0.6-4.8l1.7-8.4c0.3-1.6-0.1-3.4-1.5-4.3"/>
-	<path id="path6745-2-1-4-1-0-1-8-5" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st24" d="M225.8,68.2
+	<path id="path6745-2-1-4-1-0-1-8-5" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st24" d="M225.8,68.2
 		c-2.7-1.6-1.6-5.2,1-5.7"/>
-	<path id="path6747-1-8-2-5-5-8-3-8" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st25" d="M231.1,72.2
+	<path id="path6747-1-8-2-5-5-8-3-8" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st25" d="M231.1,72.2
 		l1.1-7.6c0.1-1.1-0.4-2.2-1.1-3.3"/>
-	<path id="path6749-6-8-7-3-3-2-8-6" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st25" d="M232.1,76.1
+	<path id="path6749-6-8-7-3-3-2-8-6" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st25" d="M232.1,76.1
 		c-3.6,0.1-5.3,0.2-8.7,0.4c-1.5-1.2-1.1-3,0.1-4c4.4-0.2,2.2-0.3,9.1-0.3"/>
-	<path id="path10942-8-9-0-6-11-1-5-9" sodipodiNodetypes="sccccccccccs" inkscapeConnector-curvature="0" className="st26" d="
+	<path id="path10942-8-9-0-6-11-1-5-9" sodipodinodetypes="sccccccccccs" inkscapeconnector-curvature="0" className="st26" d="
 		M264.4,59.5c2.2,0.1,4.4,1.5,4.9,4.6l1,7.9c0.2,3,0.4,6.1-2.7,7l-5.4-0.1c-2.3-0.2-3-1-3.3-2.6c0.5,0,0.9,0,1.6,0
 		c1.3-1.4,0.8-3.1-0.5-4c-0.7,0-0.9,0-1.4,0l-0.6-7.2c-0.2-1.1,1.6-3.7,2.8-4.3C261.7,59.8,263.1,59.4,264.4,59.5L264.4,59.5z"/>
-	<path id="path10944-5-3-6-6-0-1-2-8" sodipodiNodetypes="csccc" inkscapeConnector-curvature="0" className="st27" d="M259.7,77.9
+	<path id="path10944-5-3-6-6-0-1-2-8" sodipodinodetypes="csccc" inkscapeconnector-curvature="0" className="st27" d="M259.7,77.9
 		c0.7,0.2,1.6,0.3,2.5-0.6c0.9-1,1-3.1,0.6-4.8l-1.7-8.4c-0.3-1.6,0.1-3.4,1.5-4.3"/>
-	<path id="path10948-7-7-8-3-8-9-3-3" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st28" d="M265.2,68.3
+	<path id="path10948-7-7-8-3-8-9-3-3" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st28" d="M265.2,68.3
 		c2.7-1.6,1.6-5.2-1-5.7"/>
-	<path id="path10950-6-9-1-3-6-7-1-5" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st27" d="M259.9,72.3
+	<path id="path10950-6-9-1-3-6-7-1-5" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st27" d="M259.9,72.3
 		l-1.1-7.6c-0.1-1.1,0.4-2.2,1.1-3.3"/>
-	<path id="path10952-1-8-8-7-3-6-3-5" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st29" d="M258.9,76.2
+	<path id="path10952-1-8-8-7-3-6-3-5" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st29" d="M258.9,76.2
 		c3.6,0.1,5.3,0.2,8.7,0.4c1.5-1.2,1.1-3-0.1-4c-4.4-0.2-2.2-0.3-9.1-0.3"/>
-	<path id="path10954-8-4-4-1-2-2-2-0" sodipodiNodetypes="sccccccccccs" inkscapeConnector-curvature="0" className="st26" d="
+	<path id="path10954-8-4-4-1-2-2-2-0" sodipodinodetypes="sccccccccccs" inkscapeconnector-curvature="0" className="st26" d="
 		M226.5,59.5c-2.2,0.1-4.4,1.5-4.9,4.6l-1,7.9c-0.2,3-0.4,6.1,2.7,7l5.4-0.1c2.3-0.2,3-1,3.3-2.6c-0.5,0-0.9,0-1.6,0
 		c-1.3-1.4-0.8-3.1,0.5-4c0.7,0,0.9,0,1.4,0l0.6-7.2c0.2-1.1-1.6-3.7-2.8-4.3C229.2,59.8,227.9,59.4,226.5,59.5L226.5,59.5z"/>
-	<path id="path10956-9-4-9-4-3-9-0-5" sodipodiNodetypes="csccc" inkscapeConnector-curvature="0" className="st27" d="M231.3,77.9
+	<path id="path10956-9-4-9-4-3-9-0-5" sodipodinodetypes="csccc" inkscapeconnector-curvature="0" className="st27" d="M231.3,77.9
 		c-0.7,0.2-1.6,0.3-2.5-0.6c-0.9-1-1-3.1-0.6-4.8l1.7-8.4c0.3-1.6-0.1-3.4-1.5-4.3"/>
-	<path id="path10960-7-0-51-8-3-5-0-8" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st28" d="M225.8,68.3
+	<path id="path10960-7-0-51-8-3-5-0-8" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st28" d="M225.8,68.3
 		c-2.7-1.6-1.6-5.2,1-5.7"/>
-	<path id="path10962-9-3-8-7-3-2-0-1" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st27" d="M231.1,72.3
+	<path id="path10962-9-3-8-7-3-2-0-1" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st27" d="M231.1,72.3
 		l1.1-7.6c0.1-1.1-0.4-2.2-1.1-3.3"/>
-	<path id="path10964-5-4-1-6-7-0-8-5" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st29" d="M232.1,76.2
+	<path id="path10964-5-4-1-6-7-0-8-5" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st29" d="M232.1,76.2
 		c-3.6,0.1-5.3,0.2-8.7,0.4c-1.5-1.2-1.1-3,0.1-4c4.4-0.2,2.2-0.3,9.1-0.3"/>
-	<path id="path68976" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st7" d="M85.7,538.2
+	<path id="path68976" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st7" d="M85.7,538.2
 		c8-1.6,11.4,2.3,13.1,8c-4.3-0.3-9.9,2.7-11.8-3.6L85.7,538.2z"/>
-	<path id="path68930" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st30" d="M130.7,611.7l0.3,70.8
+	<path id="path68930" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st30" d="M130.7,611.7l0.3,70.8
 		c11.7,14.3,27.8,11.6,44,8.3c10.5-6.7,22.1-49.9,12.8-68C177.1,617,158.6,613.3,130.7,611.7z"/>
-	<path id="path68932" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st31" d="M155.5,490.7
+	<path id="path68932" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st31" d="M155.5,490.7
 		c-6.5-0.8-10.3,1.5-11.5,6.8l-14.8,94c-0.9,7.8,2.6,10,7,11.3c22.6,1.7,49.7,12.5,57.3-15.3c8.9-29.8,6.7-55.6,6.8-82.3
 		C191.9,500,177.1,495.1,155.5,490.7z"/>
-	<path id="path68934" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st30" d="M334,490.4
+	<path id="path68934" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st30" d="M334,490.4
 		c6.5-0.8,10.3,1.5,11.5,6.8l14.8,94c0.9,7.8-2.6,10-7,11.3c-22.6,1.7-49.7,12.5-57.3-15.3c-8.9-29.8-6.7-55.6-6.8-82.3
 		C297.5,499.7,312.4,494.9,334,490.4z"/>
-	<path id="path68936" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st30" d="M358.9,611.4l-0.3,70.8
+	<path id="path68936" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st30" d="M358.9,611.4l-0.3,70.8
 		c-11.7,14.3-27.8,11.6-44,8.3c-10.5-6.7-22.1-49.9-12.8-68C312.5,616.8,331,613,358.9,611.4z"/>
-	<path id="path68946" sodipodiNodetypes="cccccc" inkscapeConnector-curvature="0" className="st5" d="M63.6,921.7
+	<path id="path68946" sodipodinodetypes="cccccc" inkscapeconnector-curvature="0" className="st5" d="M63.6,921.7
 		c-1.5,10.7,2.7,12.6,9,11.1c10.3-2.1,20.7-4.2,33.3-5.4c-1.3,5.7-2.4,11.4-8.9,15.1c-15.2,3.6-40,8.3-43.1-4.8
 		C54.3,934.3,52.6,932.4,63.6,921.7z"/>
-	<path id="path68958" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st15" d="M392.3,874.7
+	<path id="path68958" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st15" d="M392.3,874.7
 		c5.8,17.8,18.8,34.4,36.4,50.4c9.8,8.3,8.7,24-17.4,20.5c-11.8-0.6-23.4-2.3-33.5-11.8c-10.4-19.1-25.8-11.7-30.6-20.6
 		c-1.7-11.6-1.1-23.8-0.5-36l3.9-4.6L392.3,874.7z"/>
-	<path id="path68960" sodipodiNodetypes="cccccc" inkscapeConnector-curvature="0" className="st5" d="M424.7,921.2
+	<path id="path68960" sodipodinodetypes="cccccc" inkscapeconnector-curvature="0" className="st5" d="M424.7,921.2
 		c1.5,10.7-2.7,12.6-9,11.1c-10.3-2.1-20.7-4.2-33.3-5.4c1.3,5.7,2.4,11.4,8.9,15.1c15.2,3.6,40,8.3,43.1-4.8
 		C433.9,933.8,435.7,931.9,424.7,921.2z"/>
-	<path id="path68966" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st32" d="M54.1,499.2
+	<path id="path68966" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st32" d="M54.1,499.2
 		l1.8,26.9l-1.3,3.3l-0.5,10c-0.9,3.4-0.9,5.6-0.9,7.8l15.3,15.1c8,0.7,15.9,0.9,23.6-1l7.8-8.5c2.9,5.8,5.8,3.3,8.8,1.4l-0.3-11.6
 		c2.6-2.3,4.1-4.8-0.3-8.4c-0.6-1.9,1.3-2.9-3.3-6.4l-0.5-6.4c-7.8-6.2-13.8-13-18.6-20.3l-0.4-9.1
 		C72.2,487.2,63.3,493.6,54.1,499.2z"/>
-	<path id="path68980" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st5" d="M94.3,511.9
+	<path id="path68980" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M94.3,511.9
 		c-1.8,2.5-4.8,4.7-4.5,7.9l8.9,3.1l1.9-2l-0.1,11.6l2.6,4.8l-3.3,2l-0.8,7.4l-4.5-0.1c-1.1,5.1,1.9,5.7,5.4,5.9
 		c2.8,5.6,5.5,3.8,8.3,1.5l0.1-11.3c3.2-2.8,2-5.6,0-8.4c0.2-2.3-1.6-4.7-3.8-7l-0.5-6L94.3,511.9z"/>
-	<path id="path68968" sodipodiNodetypes="cccccccccccccccccc" inkscapeConnector-curvature="0" className="st5" d="M55.6,520.8
+	<path id="path68968" sodipodinodetypes="cccccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M55.6,520.8
 		l7.6-4.6c-0.2,7.2-1.3,14.1-2.1,21c7-12.1,15-23.5,28.5-30.6l3,3.4c-7.4,7.6-12,15.6-8.1,24.9l-3.9,0.8l4.9,1.4l1.6,5.4
 		c-8.7-1.5-9.7-8.2-10.6-14.9c-3.1-3.9-5.1-0.5-7.3,2c-5.4,6.9-9.4,13.8-5.9,21.4c-1.7-1.5-4.1-1-3.9-7.4l-2.3,5l-4.3-4.3l1.4-5
 		c-0.2-5.4-0.1-10.4,1.8-13.5L55.6,520.8z"/>
-	 <path id="path68972" inkscapeConnector-curvature="0" className="st7" d="M62.1,494.3l0.3,20.4l-7,4.4L54,499.6L62.1,494.3z"/>
-	<path id="path68974" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st2" d="M81.1,535.5l7.8-0.5
+	 <path id="path68972" inkscapeconnector-curvature="0" className="st7" d="M62.1,494.3l0.3,20.4l-7,4.4L54,499.6L62.1,494.3z"/>
+	<path id="path68974" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st2" d="M81.1,535.5l7.8-0.5
 		c5.8-9.9,13.7,7,10,11c-2.3-4.9-6.9-7.2-12.9-8.1L81.1,535.5z"/>
-	 <path id="path68978" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st7" d="M74.6,562.7l-3.9-4.5l5.3-0.5
+	 <path id="path68978" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st7" d="M74.6,562.7l-3.9-4.5l5.3-0.5
 		l0.9-3.3l4.3-2.9l12,8.4l-1.4,1C88.3,562.2,79.7,562.8,74.6,562.7z"/>
-	<path id="path68982" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st33" d="M107.1,537.5
+	<path id="path68982" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st33" d="M107.1,537.5
 		c-2.7,3.9-8.1,10-3.1,16.3C102.7,543.5,110.3,540.3,107.1,537.5z"/>
-	<path id="path68984" inkscapeConnector-curvature="0" className="st11" d="M90.1,519.3l-2,5.8l6.5,5l3.4-0.5l0.5-6.9L90.1,519.3z"/>
-	<path id="path68986" inkscapeConnector-curvature="0" className="st11" d="M96,533.2l4.6-1.9l3.3,6.5l-4,2.3L96,533.2z"/> 
-	 <path id="path68956" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st3" d="M415,911.5l-17.8,5.9
+	<path id="path68984" inkscapeconnector-curvature="0" className="st11" d="M90.1,519.3l-2,5.8l6.5,5l3.4-0.5l0.5-6.9L90.1,519.3z"/>
+	<path id="path68986" inkscapeconnector-curvature="0" className="st11" d="M96,533.2l4.6-1.9l3.3,6.5l-4,2.3L96,533.2z"/> 
+	 <path id="path68956" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st3" d="M415,911.5l-17.8,5.9
 		l-36.1-39.5c0.1-3.6-6.8-15.3,9.5-23.4c8.2-2.4,14.4-2.4,18.3,0.5c3.3,3.8,3.5,10.6,3.1,18C392.8,891.8,403.6,901.9,415,911.5z"/>
-	<path id="path69025" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st34" d="M169.2,701.4l-8,9
+	<path id="path69025" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st34" d="M169.2,701.4l-8,9
 		c4,20.2,4.2,40.1-9,59l-2.5,20.5l6.5-19.5c11.3-17.2,18-35.3,9.5-56.5L169.2,701.4z"/>
-	<path id="path69027" sodipodiNodetypes="ccccccc" inkscapeConnector-curvature="0" className="st34" d="M321.1,702.4l8,9
+	<path id="path69027" sodipodinodetypes="ccccccc" inkscapeconnector-curvature="0" className="st34" d="M321.1,702.4l8,9
 		c-4,20.2-4.2,40.1,9,59l2.5,20.5l-6.5-19.5c-11.3-17.2-18-35.3-9.5-56.5L321.1,702.4z"/>
-	<path id="path69053" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st13" d="M54.1,499.2
+	<path id="path69053" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st13" d="M54.1,499.2
 		l1.8,26.9l-1.3,3.3l-0.5,10c-0.9,3.4-0.9,5.6-0.9,7.8l15.3,15.1c8,0.7,15.9,0.9,23.6-1l7.8-8.5c2.9,5.8,5.8,3.3,8.8,1.4l-0.3-11.6
 		c2.6-2.3,4.1-4.8-0.3-8.4c-0.6-1.9,1.3-2.9-3.3-6.4l-0.5-6.4c-7.8-6.2-13.8-13-18.6-20.3l-0.4-9.1
 		C72.2,487.2,63.3,493.6,54.1,499.2z"/>
-	<path id="path69076" sodipodiNodetypes="cccc" inkscapeConnector-curvature="0" className="st7" d="M406.3,539.7
+	<path id="path69076" sodipodinodetypes="cccc" inkscapeconnector-curvature="0" className="st7" d="M406.3,539.7
 		c-8-1.6-11.4,2.3-13.1,8c4.3-0.3,9.9,2.7,11.8-3.6L406.3,539.7z"/>
-	 <path id="path69078" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st32" d="M437.9,500.7
+	 <path id="path69078" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st32" d="M437.9,500.7
 		l-1.8,26.9l1.3,3.3l0.5,10c0.9,3.4,0.9,5.6,0.9,7.8l-15.3,15.1c-8,0.7-15.9,0.9-23.6-1l-7.8-8.5c-2.9,5.8-5.8,3.3-8.8,1.4l0.4-11.8
 		c-2.6-2.3-4.1-4.8,0.3-8.4c0.6-1.9-1.3-2.9,3.3-6.4l0.5-6.4c7.8-6.2,13.8-13,18.6-20.3l0.4-9.1
 		C419.8,488.7,428.7,495.1,437.9,500.7z"/>
-	<path id="path69080" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st5" d="M397.7,513.4
+	<path id="path69080" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M397.7,513.4
 		c1.8,2.5,4.8,4.7,4.5,7.9l-8.9,3.1l-1.9-2l0.1,11.6l-2.6,4.8l3.3,2l0.8,7.4l4.5-0.1c1.1,5.1-1.9,5.7-5.4,5.9
 		c-2.8,5.6-5.5,3.8-8.3,1.5l-0.1-11.3c-3.2-2.8-2-5.6,0-8.4c-0.2-2.3,1.6-4.7,3.8-7l0.5-6L397.7,513.4z"/>
-	<path id="path69082" sodipodiNodetypes="cccccccccccccccccc" inkscapeConnector-curvature="0" className="st5" d="M436.4,522.3
+	<path id="path69082" sodipodinodetypes="cccccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M436.4,522.3
 		l-7.6-4.6c0.2,7.2,1.3,14.1,2.1,21c-7-12.1-15-23.5-28.5-30.6l-3,3.4c7.4,7.6,12,15.6,8.1,24.9l3.9,0.8l-4.9,1.4l-1.6,5.4
 		c8.7-1.5,9.7-8.2,10.6-14.9c3.1-3.9,5.1-0.5,7.3,2c5.4,6.9,9.4,13.8,5.9,21.4c1.7-1.5,4.1-1,3.9-7.4l2.3,5l4.3-4.3l-1.4-5
 		c0.2-5.4,0.1-10.4-1.8-13.5L436.4,522.3z"/>
-	 <path id="path69086" inkscapeConnector-curvature="0" className="st7" d="M429.9,495.8l-0.3,20.4l7,4.4l1.4-19.5L429.9,495.8z"/>
-	<path id="path69088" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st2" d="M410.9,537l-7.8-0.5
+	 <path id="path69086" inkscapeconnector-curvature="0" className="st7" d="M429.9,495.8l-0.3,20.4l7,4.4l1.4-19.5L429.9,495.8z"/>
+	<path id="path69088" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st2" d="M410.9,537l-7.8-0.5
 		c-5.8-9.9-13.7,7-10,11c2.3-4.9,6.9-7.2,12.9-8.1L410.9,537z"/>
-	<path id="path69090" sodipodiNodetypes="cccccccc" inkscapeConnector-curvature="0" className="st7" d="M417.4,564.2l3.9-4.5
+	<path id="path69090" sodipodinodetypes="cccccccc" inkscapeconnector-curvature="0" className="st7" d="M417.4,564.2l3.9-4.5
 		l-5.3-0.5l-0.9-3.3l-4.3-2.9l-12,8.4l1.4,1C403.7,563.7,412.3,564.3,417.4,564.2z"/>
-	<path id="path69092" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st33" d="M384.9,539
+	<path id="path69092" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st33" d="M384.9,539
 		c2.7,3.9,8.1,10,3.1,16.3C389.3,545,381.7,541.8,384.9,539z"/>
-	<path id="path69094" inkscapeConnector-curvature="0" className="st11" d="M401.9,520.8l2,5.8l-6.5,5l-3.4-0.5l-0.5-6.9L401.9,520.8z"
+	<path id="path69094" inkscapeconnector-curvature="0" className="st11" d="M401.9,520.8l2,5.8l-6.5,5l-3.4-0.5l-0.5-6.9L401.9,520.8z"
 		/>
-	<path id="path69096" inkscapeConnector-curvature="0" className="st11" d="M396.1,534.7l-4.6-1.9l-3.3,6.5l4,2.3L396.1,534.7z"/>
-	<path id="path69098" sodipodiNodetypes="cccccccccccccccc" inkscapeConnector-curvature="0" className="st13" d="M437.9,500.7
+	<path id="path69096" inkscapeconnector-curvature="0" className="st11" d="M396.1,534.7l-4.6-1.9l-3.3,6.5l4,2.3L396.1,534.7z"/>
+	<path id="path69098" sodipodinodetypes="cccccccccccccccc" inkscapeconnector-curvature="0" className="st13" d="M437.9,500.7
 		l-1.8,26.9l1.3,3.3l0.5,10c0.9,3.4,0.9,5.6,0.9,7.8l-15.3,15.1c-8,0.7-15.9,0.9-23.6-1l-7.8-8.5c-2.9,5.8-5.8,3.3-8.8,1.4l0.4-11.8
 		c-2.6-2.3-4.1-4.8,0.3-8.4c0.6-1.9-1.3-2.9,3.3-6.4l0.5-6.4c7.8-6.2,13.8-13,18.6-20.3l0.4-9.1
 		C419.8,488.7,428.7,495.1,437.9,500.7z"/>
-	<path id="path69205" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st36" d="M657.3,240.9
+	<path id="path69205" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M657.3,240.9
 		c13.2-11.9,24.2-12.3,33.4-3.6c19.3,22,21.5,34.6,25,47.9"/>
-    <path id="path71625" inkscapeConnector-curvature="0" className="st7" d="M148.3,212.1c-1.9-0.4-2.2-2.9-0.5-3.8
+    <path id="path71625" inkscapeconnector-curvature="0" className="st7" d="M148.3,212.1c-1.9-0.4-2.2-2.9-0.5-3.8
 		c0.5-0.2,1.1-0.3,1.6,0c0.2,0.1,0.4,0.2,0.4,0.2s0-0.1,0-0.2c0-0.2,0-0.2,0.4-0.2h0.4v2v2h-0.4c-0.4,0-0.4,0-0.4-0.1
 		c0-0.2-0.1-0.2-0.2-0.1c-0.1,0.1-0.9,0.3-1,0.3C148.6,212.2,148.4,212.1,148.3,212.1L148.3,212.1z M149.4,211.1
 		c0.5-0.4,0.6-1,0.3-1.5c-0.5-0.8-1.7-0.8-2.1,0.1c-0.2,0.4-0.2,0.7,0,1.1C148,211.3,148.8,211.5,149.4,211.1L149.4,211.1z
@@ -786,38 +786,38 @@ function Jersey(props) {
 		c-0.1-0.1-0.1,0-0.1,0S168.8,207.4,168.9,207.4L168.9,207.4z M169.1,207.3c0,0-0.1-0.1-0.2-0.2c-0.1-0.1-0.2-0.1-0.1-0.1
 		C169,207,169.3,207.3,169.1,207.3C169.2,207.4,169.1,207.3,169.1,207.3L169.1,207.3z M159.7,203.3c-1.2-2.1-2.2-3.8-2.2-3.8
 		c0-0.1,3.3-2.1,3.4-2s5.6,9.5,5.6,9.5s-1,0-2.3,0h-2.3L159.7,203.3L159.7,203.3z"/>
-    <path id="path71638" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st36" d="M177.2,155.4
+    <path id="path71638" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M177.2,155.4
 		c5.9,20.2,29,37.1,67.5,49.3c28.7-10.8,60.4-20.9,67.3-49.8"/>
-    <path id="path71653" sodipodiNodetypes="ccccccccc" inkscapeConnector-curvature="0" className="st60" d="M180.7,154.2
+    <path id="path71653" sodipodinodetypes="ccccccccc" inkscapeconnector-curvature="0" className="st60" d="M180.7,154.2
 		c5.9,20.2,26,34.6,64.5,46.8c28.7-10.8,56.6-17.7,63.5-46.5l-10.8-4.8l-1.8,2.3c-5.9,20.9-31.1,27.8-51,38.5
 		c-21-11.4-49.7-19.6-50.3-39.8l-1.8-1.5L180.7,154.2z"/>
-     <path id="path71657" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st35" d="M106,243.4
+     <path id="path71657" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st35" d="M106,243.4
 		c3.3-11.3,10.3-20.2,26.8-12.8c23.3,21.5,27.3,35.9,31,50.3"/>
-     <path id="path71659" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st36" d="M103.7,242.4
+     <path id="path71659" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M103.7,242.4
 		c3.3-11.3,12.8-21.2,29.3-13.8c23.3,21.5,32.5,40.9,31.3,55"/>
-     <path id="path71663" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st35" d="M385.1,243.4
+     <path id="path71663" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st35" d="M385.1,243.4
 		c-3.4-11.3-10.4-20.2-26.8-12.7c-23.3,21.5-27.3,35.9-31,50.3"/>
-     <path id="path71665" sodipodiNodetypes="ccc" inkscapeConnector-curvature="0" className="st36" d="M387.3,242.4
+     <path id="path71665" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M387.3,242.4
 		c-3.3-11.3-12.8-21.2-29.3-13.8c-23.3,21.5-32.5,40.9-31.3,55"/>
-     <path id="path71680" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st62" d="M124.7,228.7
+     <path id="path71680" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st62" d="M124.7,228.7
 		c-4.6-52.7,43.5-50.7,73-58.5"/>
-     <path id="path71682" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st35" d="M366.2,227.9
+     <path id="path71682" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st35" d="M366.2,227.9
 		c6.6-52.3-41.7-51.6-73.3-59.8"/>
-    <path id="path71684" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st62" d="M363.7,228.7
+    <path id="path71684" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st62" d="M363.7,228.7
 		c4.6-52.7-43.5-50.7-73-58.5"/>
-     <path id="path66916" sodipodiNodetypes="ccccc" inkscapeConnector-curvature="0" className="st2" d="M194.3,151.2
+     <path id="path66916" sodipodinodetypes="ccccc" inkscapeconnector-curvature="0" className="st2" d="M194.3,151.2
 		c8.8,12.3,24.2,22.5,50.6,29.3c19.5-5.6,36.6-14.3,50.9-28.8c7.8,18.5-20.3,31-50.9,42.6C206.7,180.3,183.9,166,194.3,151.2z"/>
-     <path id="path74843" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st35" d="M162.3,407.7
+     <path id="path74843" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st35" d="M162.3,407.7
 		c56.1,22.2,111.7,23.8,166.9,0.7"/>
-    <path id="path74845" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st36" d="M163.7,404.2
+    <path id="path74845" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M163.7,404.2
 		c56.1,22.2,108.9,23.8,164,0.7"/> 
-     <path id="path74847" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st36" d="M207.2,410.2
+     <path id="path74847" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M207.2,410.2
 		c-1.7,77.2,1.3,135,28.3,143.2"/>
-    <path id="path74851" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st36" d="M282.2,411.6
+    <path id="path74851" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M282.2,411.6
 		c1.7,77.2-1.3,135-28.3,143.2"/>
-  <path id="path74857" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" className="st36" d="M766.7,392
+  <path id="path74857" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M766.7,392
 		// c-1.7,77.2,5.9,153.3,38.2,162.3"/>  
-     <path id="path75637" inkscapeConnector-curvature="0" className="st0" d="M101.4,875.1c-1.9-0.4-2.2-2.9-0.5-3.8
+     <path id="path75637" inkscapeconnector-curvature="0" className="st0" d="M101.4,875.1c-1.9-0.4-2.2-2.9-0.5-3.8
 		c0.5-0.2,1.1-0.3,1.6,0c0.2,0.1,0.4,0.2,0.4,0.2s0-0.1,0-0.2c0-0.2,0-0.2,0.4-0.2h0.4v2v2h-0.4c-0.4,0-0.4,0-0.4-0.1
 		c0-0.2-0.1-0.2-0.2-0.1c-0.1,0.1-0.9,0.3-1,0.3C101.8,875.2,101.6,875.2,101.4,875.1L101.4,875.1z M102.5,874.1
 		c0.5-0.4,0.6-1,0.3-1.5c-0.5-0.8-1.7-0.8-2.1,0.1c-0.2,0.4-0.2,0.7,0,1.1C101.1,874.3,101.9,874.5,102.5,874.1L102.5,874.1z
@@ -843,7 +843,7 @@ function Jersey(props) {
 		c-0.1-0.1-0.1,0-0.1,0S122,870.5,122.1,870.4C122,870.5,122.1,870.4,122.1,870.4z M122.3,870.3c0,0-0.1-0.1-0.2-0.2
 		c-0.1-0.1-0.2-0.1-0.1-0.1C122.1,870,122.4,870.3,122.3,870.3C122.3,870.4,122.3,870.4,122.3,870.3L122.3,870.3z M112.9,866.3
 		c-1.2-2.1-2.2-3.8-2.2-3.8c0-0.1,3.3-2.1,3.4-2s5.6,9.5,5.6,9.5s-1,0-2.3,0h-2.3C115.1,870,112.9,866.3,112.9,866.3z"/>
-	 <path id="path75639" inkscapeConnector-curvature="0" className="st0" d="M366.4,873.1c-1.9-0.4-2.2-2.9-0.5-3.8
+	 <path id="path75639" inkscapeconnector-curvature="0" className="st0" d="M366.4,873.1c-1.9-0.4-2.2-2.9-0.5-3.8
 		c0.5-0.2,1.1-0.3,1.6,0c0.2,0.1,0.4,0.2,0.4,0.2s0-0.1,0-0.2c0-0.2,0-0.2,0.4-0.2h0.4v2v2h-0.4c-0.4,0-0.4,0-0.4-0.1
 		c0-0.2-0.1-0.2-0.2-0.1c-0.1,0.1-0.9,0.3-1,0.3C366.8,873.2,366.6,873.2,366.4,873.1L366.4,873.1z M367.5,872.1
 		c0.5-0.4,0.6-1,0.3-1.5c-0.5-0.8-1.7-0.8-2.1,0.1c-0.2,0.4-0.2,0.7,0,1.1C366.1,872.3,366.9,872.5,367.5,872.1L367.5,872.1z
@@ -885,12 +885,12 @@ function Jersey(props) {
 							"/> 
 			<polygon className="st11" points="284.4,323.2 289.2,328.1 294.9,328.1 294.9,342.9 299.8,347.8 299.8,323.2 			"/> 
 </g>
-<path class="st7" d="M193.2,350.6v-20.9h8.9v-66.8h-8.9V242l12.5-4.8H223v92.5h8.8v20.9L193.2,350.6L193.2,350.6z"></path>
-<polygon class="st7" points="289.1,237.1 252.6,237.1 239.1,249 239.1,267.2 260.3,267.2 260.3,258.1 281.6,258.1 281.6,273.6  264.8,283.3 239.1,298.1 239.1,322.3 239.1,350.6 302.5,350.6 302.5,320.4 281.6,320.4 281.6,329.6 260.1,329.6 260.1,310.2  270.3,304.3 302.5,285.7 302.5,261.5 302.5,249 	"></polygon>
-<path id="path68862" sodipodiNodetypes="ccccccccccccccc" inkscapeConnector-curvature="0" class="st7" d="M166.2,396.2 c-8.7,29.3-19.3,56-21.8,93.5c-16,50.5-17.8,85.2-17.3,117.3c-0.1,26.2,0,52.6,0.5,79.5c14.5,21.1,33.7,16.3,53.5,7.8 c12.6-20.5,20.8-43.8,26-69c10.4-26.4,25.7-47.3,29-71l3.5-24c3.4-3.8,9.1-1.8,10.3-0.3c6,54.7,23.9,64.9,32.8,95.3 c7.8,29,15.9,51.6,24.3,67.8c32.5,16.9,44,7,55-3.5c6.7-133.4-6.1-156-15.3-198.8c-4-27.7-9-56.5-22.3-94.8 C271.6,418,218.4,420.9,166.2,396.2z"></path>
-<path id="path74851" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" class="st36" d="M282.2,411.6 c1.7,77.2-1.3,135-28.3,143.2"></path>
-<path id="path74853" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" class="st36" d="M207.2,410.2 c-1.7,77.2,1.3,135,28.3,143.2"></path>
-<path id="path74845" sodipodiNodetypes="cc" inkscapeConnector-curvature="0" class="st36" d="M163.7,404.2 c56.1,22.2,108.9,23.8,164,0.7"></path>
+<path className="st7" d="M193.2,350.6v-20.9h8.9v-66.8h-8.9V242l12.5-4.8H223v92.5h8.8v20.9L193.2,350.6L193.2,350.6z"></path>
+<polygon className="st7" points="289.1,237.1 252.6,237.1 239.1,249 239.1,267.2 260.3,267.2 260.3,258.1 281.6,258.1 281.6,273.6  264.8,283.3 239.1,298.1 239.1,322.3 239.1,350.6 302.5,350.6 302.5,320.4 281.6,320.4 281.6,329.6 260.1,329.6 260.1,310.2  270.3,304.3 302.5,285.7 302.5,261.5 302.5,249 	"></polygon>
+<path id="path68862" sodipodinodetypes="ccccccccccccccc" inkscapeconnector-curvature="0" className="st7" d="M166.2,396.2 c-8.7,29.3-19.3,56-21.8,93.5c-16,50.5-17.8,85.2-17.3,117.3c-0.1,26.2,0,52.6,0.5,79.5c14.5,21.1,33.7,16.3,53.5,7.8 c12.6-20.5,20.8-43.8,26-69c10.4-26.4,25.7-47.3,29-71l3.5-24c3.4-3.8,9.1-1.8,10.3-0.3c6,54.7,23.9,64.9,32.8,95.3 c7.8,29,15.9,51.6,24.3,67.8c32.5,16.9,44,7,55-3.5c6.7-133.4-6.1-156-15.3-198.8c-4-27.7-9-56.5-22.3-94.8 C271.6,418,218.4,420.9,166.2,396.2z"></path>
+<path id="path74851" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M282.2,411.6 c1.7,77.2-1.3,135-28.3,143.2"></path>
+<path id="path74853" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M207.2,410.2 c-1.7,77.2,1.3,135,28.3,143.2"></path>
+<path id="path74845" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M163.7,404.2 c56.1,22.2,108.9,23.8,164,0.7"></path>
      </JerseyStyle> 
       </div>
 

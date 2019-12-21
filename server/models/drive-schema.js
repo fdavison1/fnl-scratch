@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const { PlaySchema } = require('./play-model')
+// const { PlaySchema } = require('./play-model')
 
   const DriveSchema = new Schema({
     driveCount: { type: Number, required: false },

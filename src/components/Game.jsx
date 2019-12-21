@@ -28,13 +28,28 @@ export default class Game extends React.Component {
     hColor: '',
     hSchool: '',
     hMascot: '',
-    hPlayers: []
+    hPlayers: [],
+    score: {
+      home: {
+        first: [0],
+        second: [0],
+        third: [0],
+        fourth: [0]  
+      },
+      away: {
+        first: [0],
+        second: [0],
+        third: [0],
+        fourth: [0]  
+      }    
+    },
+
+    selectedDrive: 0,
   }
 
     componentDidMount(){
         let id = this.props.match.params.id
         axios.get(`/api/game/${id}`).then(res => {
-            console.log(res.data.data)
             
             let a = res.data.data.away 
             let h = res.data.data.home
@@ -54,6 +69,7 @@ export default class Game extends React.Component {
               start_time: start_time,
               isLoading: false
             })
+            console.log(this.state.gameObj)
         })
   }
   getGame() {
@@ -73,11 +89,15 @@ export default class Game extends React.Component {
   }
   updateGame = (game) => {
       this.setState({ gameObj: game });
+  }
 
+  setCurrentDrive = id => {
+    this.setState({
+        selectedDrive: id
+    })
   }
 
   render() {
-   console.log(this.state.gameObj)
    
     
     return (
@@ -91,12 +111,13 @@ export default class Game extends React.Component {
             game={this.state.gameObj}
             hPlayers={this.state.hPlayers}
             aPlayers={this.state.aPlayers}
+            score={this.state.score}
           />
         )}
         {!this.state.isLoading && (
           <div className='container'>
             <GameLeaders game={this.state} />
-            <Drives game={this.state.gameObj} />
+            <Drives setCurrentDrive={this.setCurrentDrive} selectedDrive={this.state.selectedDrive} game={this.state.gameObj} />
           </div>
         )}
       </Wrapper>

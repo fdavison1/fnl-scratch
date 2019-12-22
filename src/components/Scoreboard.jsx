@@ -34,15 +34,15 @@ background: lightgray;
   font-family: Digital-7;
   font-size: 3rem;
   justify-content: center;
-  /* border: 1px solid black; */
   background: white;
   border-radius: 5px;
+  padding: 0 20px;
 }
 .clockContainer {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   justify-content: center;
+  align-items: center;
 }
 #title {
   font-family: sans-serif;
@@ -68,6 +68,10 @@ background: lightgray;
 }
 span {
   font-weight: 700;
+}
+.placeholder {
+  display: flex;
+  justify-content: center;
 }`
 
 
@@ -134,6 +138,8 @@ export default class Scoreboard extends React.Component {
 
 
         this.setState({
+          min: '15',
+          sec: '00',
           hScore: newHScore,
           aScore: newAScore,
           hs1: newHS1,
@@ -182,6 +188,22 @@ export default class Scoreboard extends React.Component {
           <div className='clockContainer'>
             {this.props.game.status === 'inProgress' && (
               <>
+
+                <h1 id='title'>Time Remaining:</h1>
+
+                <div className='clock'>
+                  <div className='numbers'>
+                    <p className='hours'></p>
+                    <p className='placeholder'>{this.state.min}</p>
+                  </div>
+                  <div className='colon'>
+                    <p>:</p>
+                  </div>
+                  <div className='numbers'>
+                    <p className='minutes'></p>
+                    <p className='placeholder'>{this.state.sec}</p>
+                  </div>
+                </div>
                 <div className='box-score'>
                   <div className='quarter'>
                     <p>
@@ -221,22 +243,6 @@ export default class Scoreboard extends React.Component {
                     </p>
                     <p>{hs4.toString()}</p>
                     <p>{as4.toString()}</p>
-                  </div>
-                </div>
-
-                <h1 id='title'>Time Remaining:</h1>
-
-                <div className='clock'>
-                  <div className='numbers'>
-                    <p className='hours'></p>
-                    <p className='placeholder'>88</p>
-                  </div>
-                  <div className='colon'>
-                    <p>:</p>
-                  </div>
-                  <div className='numbers'>
-                    <p className='minutes'></p>
-                    <p className='placeholder'>88</p>
                   </div>
                 </div>
               </>

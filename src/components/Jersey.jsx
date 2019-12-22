@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const Jersey = props => {
 
 const JerseyStyle = styled.svg`
-	/* border: solid black; */
 	height: 115px;
 	${props.flip && 'transform: scaleX(-1);'}
 	.test {
@@ -34,8 +33,7 @@ const JerseyStyle = styled.svg`
     stroke: #010101;
   }
   .st5 {
-	  fill: none;
-    /* fill: #ffffff; */
+	${props.flip && `fill: ${props.flip ? 'white' : props.color}`}
   }
   .st6 {
     fill: #ffffff;
@@ -44,7 +42,7 @@ const JerseyStyle = styled.svg`
     stroke-linejoin: round;
   }
   .st7 {
-    fill: ${props.color};
+    fill: ${props.color}
   }
   .st8 {
     fill: #5d0626;
@@ -323,7 +321,12 @@ const JerseyStyle = styled.svg`
     opacity: 0.1726;
     fill: #010101;
     /* enable-background: new; */
-	}`
+}
+#path68862 {
+	${`fill: ${props.flip ? props.color : 'white'}`}
+	stroke: black;
+	stroke-width: 2px;
+}`
 
 const style = {
 	color: 'black',
@@ -387,18 +390,18 @@ const style = {
 		
 		{/* JERSEY NUMBER */}
 		<g >
-			<text x="193" y="275" font-family="Verdana" font-size="50" fill={props.color} {...props.flip && {transform:"scale(-1,1) translate(-485)"}}> 
-       			 {props.school}
-    		</text>
-			<text x="190" y="365" font-family="sans-serif" font-size="100" font-weight='bold' fill={props.color} {...props.flip && {transform:"scale(-1,1) translate(-495)"}}>
-				{props.number}
-			</text>
 	 <path sodipodinodetypes="ccccccccccccccccccccc" inkscapeconnector-curvature="0" className="st5" d="M166,399.2l70.5,18
 		c21.3,1.2,50.7-4.9,88-17.8c-2.5-47.4,3.9-57.9,3-86.5c0-10.2,0-21.2,0-32c11.8-20,24-47.9,41-49c10.8,4.3,9.7,8.5,11,12.8
 		c6.1-0.1,9.6-3.3,11.8-8c-1-13,4.4-49.8-8.5-56.3c-15.8-10.2-41.7-19.4-70-25.3l-18.5-6.5c7.1,19.3-27.9,34.1-49.5,43
 		c-14-7.8-60-22.9-47.5-44l-20.3,7.8c-27.9,4.8-51.9,11.1-69,24.8c-9.2,10.7-9.4,21.1-8.8,56.8c1.2,4.4,5.9,6.5,11,8.3
 		c-1.3-6.5,9.5-18.5,19.3-10.3c9.4,3.5,21.3,22.7,34,46c-1.1,18.9-2.3,42.5,3.5,71.5C166.6,365,166.3,382.8,166,399.2z"> 
 		</path>
+			<text x="193" y="275" font-family="Verdana" font-size="50" fill={props.flip ? props.color : 'white'} {...props.flip && {transform:"scale(-1,1) translate(-490)"}}> 
+       			 {props.school}
+    		</text>
+			<text x="190" y="365" font-family="sans-serif" font-size="100" font-weight='bold' fill={props.flip ? props.color : 'white'}  {...props.flip && {transform:"scale(-1,1) translate(-490)"}}>
+				{props.number}
+			</text>
 		</g>
 
 

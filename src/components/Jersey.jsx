@@ -388,7 +388,7 @@ const style = {
 		{/* JERSEY NUMBER */}
 		<g >
 			<text x="193" y="275" font-family="Verdana" font-size="50" fill={props.color} {...props.flip && {transform:"scale(-1,1) translate(-485)"}}> 
-       			 LHS
+       			 {props.school}
     		</text>
 			<text x="190" y="365" font-family="sans-serif" font-size="100" font-weight='bold' fill={props.color} {...props.flip && {transform:"scale(-1,1) translate(-495)"}}>
 				{props.number}

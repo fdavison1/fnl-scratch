@@ -47,7 +47,7 @@ export default class GameLeaders extends React.Component{
         return (
           <Wrapper>
             <div className='section'>
-              <Jersey color={this.props.game.home.color} number='21' />
+              <Jersey color={this.props.game.home.color} number='21' school='LHS'/>
               <div className='stats'>
                 <h1>Passing Leaders</h1>
                 <div className='box'>
@@ -63,11 +63,11 @@ export default class GameLeaders extends React.Component{
                   </div>
                 </div>
               </div>
-              <Jersey color={this.props.game.away.color} number='18' flip={true} />
+              <Jersey color={this.props.game.away.color} number='18' flip={true} school='HHS'/>
             </div>
 
             <div className='section'>
-              <Jersey color={this.props.game.home.color} number='07' />
+              <Jersey color={this.props.game.home.color} number='07' school='LHS'/>
               <div className='stats'>
                 <h1>Rushing Leaders</h1>
                 <div className='box'>
@@ -89,11 +89,12 @@ export default class GameLeaders extends React.Component{
                 color={this.props.game.away.color}
                 number='17'
                 flip={true}
+                school='HHS'
               />
             </div>
 
             <div className='section'>
-              <Jersey color={this.props.game.home.color} number='99' />
+              <Jersey color={this.props.game.home.color} number='99' school='LHS'/>
               <div className='stats'>
                 <h1>Receiving Leaders</h1>
                 <div className='box'>
@@ -113,6 +114,7 @@ export default class GameLeaders extends React.Component{
                 color={this.props.game.away.color}
                 number='80'
                 flip={true}
+                school='HHS'
               />
             </div>
           </Wrapper>

@@ -43,6 +43,7 @@ background: lightgray;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 #title {
   font-family: sans-serif;
@@ -54,11 +55,8 @@ background: lightgray;
 }
 .box-score {
   display: flex;
-  /* border: 1px solid black; */
-  /* border-radius: 5px; */
   padding: 3px 5px;
   margin-bottom: 3px;
-  /* background: white; */
 }
 .quarter {
   display: flex;

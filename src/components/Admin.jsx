@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   border: 1px solid black;
   height: 100px;
   width: 850px;
+  border-radius: 7px;
 `
 
 export default class Admin extends React.Component {

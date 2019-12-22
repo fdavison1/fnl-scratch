@@ -328,12 +328,6 @@ const JerseyStyle = styled.svg`
 	stroke-width: 2px;
 }`
 
-const style = {
-	color: 'black',
-	border: 'solid black',
-	// transform: 'scaleX(-1) translate(0, 100)'
-	transform: 'scale(1 -1) translate(0,-390)'
-}
     
   return (
     <div className='App'>

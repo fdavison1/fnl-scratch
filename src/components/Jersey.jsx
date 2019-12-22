@@ -325,7 +325,13 @@ const JerseyStyle = styled.svg`
 #path68862 {
 	${`fill: ${props.flip ? props.color : 'white'}`}
 	stroke: black;
-	stroke-width: 2px;
+	stroke-width: 1px;
+}
+#path71625, #sec {
+	${`fill: ${props.flip ? props.color : 'white'}`}
+}
+#path74248, #path74246 {
+	${`fill: ${!props.flip && props.color}`}
 }`
 
     
@@ -390,10 +396,10 @@ const JerseyStyle = styled.svg`
 		c-14-7.8-60-22.9-47.5-44l-20.3,7.8c-27.9,4.8-51.9,11.1-69,24.8c-9.2,10.7-9.4,21.1-8.8,56.8c1.2,4.4,5.9,6.5,11,8.3
 		c-1.3-6.5,9.5-18.5,19.3-10.3c9.4,3.5,21.3,22.7,34,46c-1.1,18.9-2.3,42.5,3.5,71.5C166.6,365,166.3,382.8,166,399.2z"> 
 		</path>
-			<text x="193" y="275" font-family="Verdana" font-size="50" fill={props.flip ? props.color : 'white'} {...props.flip && {transform:"scale(-1,1) translate(-490)"}}> 
+			<text x="193" y="275" fontFamily="Verdana" fontSize="50" fill={props.flip ? props.color : 'white'} {...props.flip && {transform:"scale(-1,1) translate(-490)"}}> 
        			 {props.school}
     		</text>
-			<text x="190" y="365" font-family="sans-serif" font-size="100" font-weight='bold' fill={props.flip ? props.color : 'white'}  {...props.flip && {transform:"scale(-1,1) translate(-490)"}}>
+			<text x="190" y="365" fontFamily="sans-serif" fontSize="100" fontWeight='bold' fill={props.flip ? props.color : 'white'}  {...props.flip && {transform:"scale(-1,1) translate(-490)"}}>
 				{props.number}
 			</text>
 		</g>
@@ -662,7 +668,7 @@ const JerseyStyle = styled.svg`
 	<path id="path6726-2-2-7-6-0-6-1-2" sodipodinodetypes="sccccccccccs" inkscapeconnector-curvature="0" className="st24" d="
 		M264.4,59.4c2.2,0.1,4.4,1.5,4.9,4.6l1,7.9c0.2,3,0.4,6.1-2.7,7l-5.4-0.1c-2.3-0.2-3-1-3.3-2.6c0.5,0,0.9,0,1.6,0
 		c1.3-1.4,0.8-3.1-0.5-4c-0.7,0-0.9,0-1.4,0L258,65c-0.2-1.1,1.6-3.7,2.8-4.3C261.7,59.7,263.1,59.3,264.4,59.4L264.4,59.4
-		L264.4,59.4z"/> guy*/}
+		L264.4,59.4z"/>
 	 <path id="path6728-7-6-4-4-2-5-5-7" sodipodinodetypes="csccc" inkscapeconnector-curvature="0" className="st25" d="M259.7,77.8
 		c0.7,0.2,1.6,0.3,2.5-0.6c0.9-1,1-3.1,0.6-4.8l-1.7-8.4c-0.3-1.6,0.1-3.4,1.5-4.3"/>
 	<path id="path6732-1-3-6-4-90-3-2-2" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st24" d="M265.1,68.2
@@ -782,8 +788,8 @@ const JerseyStyle = styled.svg`
 		l-1.8,26.9l1.3,3.3l0.5,10c0.9,3.4,0.9,5.6,0.9,7.8l-15.3,15.1c-8,0.7-15.9,0.9-23.6-1l-7.8-8.5c-2.9,5.8-5.8,3.3-8.8,1.4l0.4-11.8
 		c-2.6-2.3-4.1-4.8,0.3-8.4c0.6-1.9-1.3-2.9,3.3-6.4l0.5-6.4c7.8-6.2,13.8-13,18.6-20.3l0.4-9.1
 		C419.8,488.7,428.7,495.1,437.9,500.7z"/>
-	<path id="path69205" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M657.3,240.9
-		c13.2-11.9,24.2-12.3,33.4-3.6c19.3,22,21.5,34.6,25,47.9"/>
+	{/* <path id="path69205" sodipodinodetypes="ccc" inkscapeconnector-curvature="0" className="st36" d="M657.3,240.9
+		c13.2-11.9,24.2-12.3,33.4-3.6c19.3,22,21.5,34.6,25,47.9"/> */}
     <path id="path71625" inkscapeconnector-curvature="0" className="st7" d="M148.3,212.1c-1.9-0.4-2.2-2.9-0.5-3.8
 		c0.5-0.2,1.1-0.3,1.6,0c0.2,0.1,0.4,0.2,0.4,0.2s0-0.1,0-0.2c0-0.2,0-0.2,0.4-0.2h0.4v2v2h-0.4c-0.4,0-0.4,0-0.4-0.1
 		c0-0.2-0.1-0.2-0.2-0.1c-0.1,0.1-0.9,0.3-1,0.3C148.6,212.2,148.4,212.1,148.3,212.1L148.3,212.1z M149.4,211.1
@@ -839,8 +845,8 @@ const JerseyStyle = styled.svg`
 		c-1.7,77.2,1.3,135,28.3,143.2"/>
     <path id="path74851" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M282.2,411.6
 		c1.7,77.2-1.3,135-28.3,143.2"/>
-  <path id="path74857" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M766.7,392
-		// c-1.7,77.2,5.9,153.3,38.2,162.3"/>  
+  {/* <path id="path74857" sodipodinodetypes="cc" inkscapeconnector-curvature="0" className="st36" d="M766.7,392
+		// c-1.7,77.2,5.9,153.3,38.2,162.3"/>   */}
      <path id="path75637" inkscapeconnector-curvature="0" className="st0" d="M101.4,875.1c-1.9-0.4-2.2-2.9-0.5-3.8
 		c0.5-0.2,1.1-0.3,1.6,0c0.2,0.1,0.4,0.2,0.4,0.2s0-0.1,0-0.2c0-0.2,0-0.2,0.4-0.2h0.4v2v2h-0.4c-0.4,0-0.4,0-0.4-0.1
 		c0-0.2-0.1-0.2-0.2-0.1c-0.1,0.1-0.9,0.3-1,0.3C101.8,875.2,101.6,875.2,101.4,875.1L101.4,875.1z M102.5,874.1
@@ -893,7 +899,7 @@ const JerseyStyle = styled.svg`
 		C387.1,868.4,387,868.3,387.1,868.4c-0.1-0.1-0.1,0-0.1,0S387,868.5,387.1,868.4C387,868.5,387.1,868.4,387.1,868.4z M387.3,868.3
 		c0,0-0.1-0.1-0.2-0.2s-0.2-0.1-0.1-0.1C387.1,868,387.4,868.3,387.3,868.3C387.3,868.4,387.3,868.4,387.3,868.3L387.3,868.3z
 		 M377.9,864.3c-1.2-2.1-2.2-3.8-2.2-3.8c0-0.1,3.3-2.1,3.4-2s5.6,9.5,5.6,9.5s-1,0-2.3,0h-2.3L377.9,864.3z"/>
-     	 <path className="st7" d="M329.2,192.8c3.2-0.2,6.4,0.9,8.9,2.9c2,1.6,3.5,3.8,4.3,6.3c0.6,1.9,0.7,3.9,0.4,5.9
+     	 <path className="st7" id='sec' d="M329.2,192.8c3.2-0.2,6.4,0.9,8.9,2.9c2,1.6,3.5,3.8,4.3,6.3c0.6,1.9,0.7,3.9,0.4,5.9
 				c-0.3,2.2-1.3,4.4-2.7,6.2c-1.3,1.6-2.9,2.9-4.8,3.8c-2.2,1-4.6,1.4-7,1.1c-2.8-0.3-5.6-1.6-7.6-3.6c-2.3-2.2-3.7-5.3-3.9-8.4
 				c-0.1-1.3,0-2.7,0.3-4c0.6-2.4,1.8-4.6,3.5-6.3C322.8,194.3,326,192.9,329.2,192.8 M327.3,194.7L327.3,194.7c0,7.5,0,15,0,22.5
 				c1.8,0.4,3.6,0.3,5.4-0.1c0-1.1,0-2.1,0-3.2c-0.9,0.3-1.8,0.5-2.7,0.5c0-2.3,0-4.7,0-7c0.9,0,1.8,0,2.7,0l0,0c0-0.9,0-1.8,0-2.7

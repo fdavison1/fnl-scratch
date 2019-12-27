@@ -1,15 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import Animation from './Animation'
 import './Field.css'
 import goal from '../assets/goal.png'
 
-// const away = 'blue'
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
+
+  .fieldContainer {
+  position: relative;
+  top: 0;
+  }
+
+  .animation {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Home = styled.p`
@@ -48,11 +62,30 @@ const RightZone = styled.div`
 `
 
 export default class Field extends React.Component {
-  state = {}
+  state = {
+    start: 0,
+    //selectedDrive logic...
+    selectedDrive: 5
+  }
+
+  componentDidMount(){
+    this.setState({
+      start: this.props.game.drivesArr[this.state.selectedDrive].yardLine
+    })
+  }
 
   render() {
+    // console.log(this.props)
+    // console.log(this.props.game)
     return (
       <Wrapper>
+
+
+        <div className='fieldContainer'>
+        <div className='animation'>
+        <Animation margins={this.state} game={this.props.game}/>
+        </div>
+
         <div className='fieldDiv'>
           <img className='goal-post-left' src={goal} alt='' height='100' />
 
@@ -63,16 +96,13 @@ export default class Field extends React.Component {
           <RightZone color={this.props.game.away.color}>
             <Away>{this.props.game.away.school}</Away>
           </RightZone>
-          {/* <h3 className="team-1">Bears</h3> */}
-          {/* <h3 className="team-2">Tigers</h3> */}
+        
 
           <img className='goal-post-right' src={goal} alt='' height='100' />
         </div>
-          {/* <div id="horizontal-list">
-            <h4>10</h4>
-            <h4>50</h4>
-            <h4>10</h4>
-          </div> */}
+        
+        </div>
+          
       </Wrapper>
     )
   }
